@@ -1,0 +1,255 @@
+Logfile initialized
+[INFO] logfile = /Users/alfredchiesa/Development/titanium/Hivetrader/build.log
+[DEBUG] /Users/alfredchiesa/Library/Application Support/Titanium/mobilesdk/osx/1.8.1/android/builder.py simulator Hivetrader /Applications/android-sdk-macosx /Users/alfredchiesa/Development/titanium/Hivetrader com.hivetraderllc.hivetrader 7 HVGA 
+[INFO] Building Hivetrader for Android ... one moment
+[INFO] Titanium SDK version: 1.8.1 (01/27/12 17:31 a24502a)
+[DEBUG] Waiting for device to be ready ...
+[TRACE] adb devices returned 1 devices/emulators
+[DEBUG] Device connected... (waited 0 seconds)
+[DEBUG] waited 0.018201 seconds on emulator to get ready
+[DEBUG] com.hivetraderllc.hivetrader installed? False
+[INFO] Fastdev server running, deploying in Fastdev mode
+[INFO] Copying project resources..
+[INFO] Detected tiapp.xml change (or assets deleted), forcing full re-build...
+[TRACE] COPYING CREATED FILE: /Users/alfredchiesa/Development/titanium/Hivetrader/Resources/android/appicon.png => /Users/alfredchiesa/Development/titanium/Hivetrader/build/android/bin/assets/Resources/appicon.png
+[TRACE] COPYING CREATED FILE: /Users/alfredchiesa/Development/titanium/Hivetrader/Resources/android/default.png => /Users/alfredchiesa/Development/titanium/Hivetrader/build/android/bin/assets/Resources/default.png
+[TRACE] COPYING CREATED FILE: /Users/alfredchiesa/Development/titanium/Hivetrader/Resources/app.js => /Users/alfredchiesa/Development/titanium/Hivetrader/build/android/bin/assets/Resources/app.js
+[TRACE] COPYING CREATED FILE: /Users/alfredchiesa/Development/titanium/Hivetrader/Resources/app.jss => /Users/alfredchiesa/Development/titanium/Hivetrader/build/android/bin/assets/Resources/app.jss
+[TRACE] COPYING CREATED FILE: /Users/alfredchiesa/Development/titanium/Hivetrader/Resources/default_app_logo.png => /Users/alfredchiesa/Development/titanium/Hivetrader/build/android/bin/assets/Resources/default_app_logo.png
+[TRACE] COPYING CREATED FILE: /Users/alfredchiesa/Development/titanium/Hivetrader/Resources/hivetrader.sqlite => /Users/alfredchiesa/Development/titanium/Hivetrader/build/android/bin/assets/Resources/hivetrader.sqlite
+[TRACE] COPYING CREATED FILE: /Users/alfredchiesa/Development/titanium/Hivetrader/Resources/ht/controllers/main.js => /Users/alfredchiesa/Development/titanium/Hivetrader/build/android/bin/assets/Resources/ht/controllers/main.js
+[TRACE] COPYING CREATED FILE: /Users/alfredchiesa/Development/titanium/Hivetrader/Resources/ht/hivetrader.js => /Users/alfredchiesa/Development/titanium/Hivetrader/build/android/bin/assets/Resources/ht/hivetrader.js
+[TRACE] COPYING CREATED FILE: /Users/alfredchiesa/Development/titanium/Hivetrader/Resources/ht/models/accounts.js => /Users/alfredchiesa/Development/titanium/Hivetrader/build/android/bin/assets/Resources/ht/models/accounts.js
+[TRACE] COPYING CREATED FILE: /Users/alfredchiesa/Development/titanium/Hivetrader/Resources/ht/models/models.js => /Users/alfredchiesa/Development/titanium/Hivetrader/build/android/bin/assets/Resources/ht/models/models.js
+[TRACE] COPYING CREATED FILE: /Users/alfredchiesa/Development/titanium/Hivetrader/Resources/ht/vendor/underscore.js => /Users/alfredchiesa/Development/titanium/Hivetrader/build/android/bin/assets/Resources/ht/vendor/underscore.js
+[TRACE] COPYING CREATED FILE: /Users/alfredchiesa/Development/titanium/Hivetrader/Resources/ht/views/AccountsCredentials.js => /Users/alfredchiesa/Development/titanium/Hivetrader/build/android/bin/assets/Resources/ht/views/AccountsCredentials.js
+[TRACE] COPYING CREATED FILE: /Users/alfredchiesa/Development/titanium/Hivetrader/Resources/ht/views/AccountsSearch.js => /Users/alfredchiesa/Development/titanium/Hivetrader/build/android/bin/assets/Resources/ht/views/AccountsSearch.js
+[TRACE] COPYING CREATED FILE: /Users/alfredchiesa/Development/titanium/Hivetrader/Resources/ht/views/AccountsView.js => /Users/alfredchiesa/Development/titanium/Hivetrader/build/android/bin/assets/Resources/ht/views/AccountsView.js
+[TRACE] COPYING CREATED FILE: /Users/alfredchiesa/Development/titanium/Hivetrader/Resources/ht/views/ApplicationWindow.js => /Users/alfredchiesa/Development/titanium/Hivetrader/build/android/bin/assets/Resources/ht/views/ApplicationWindow.js
+[TRACE] COPYING CREATED FILE: /Users/alfredchiesa/Development/titanium/Hivetrader/Resources/ht/views/AvatarView.js => /Users/alfredchiesa/Development/titanium/Hivetrader/build/android/bin/assets/Resources/ht/views/AvatarView.js
+[TRACE] COPYING CREATED FILE: /Users/alfredchiesa/Development/titanium/Hivetrader/Resources/ht/views/globalViews.js => /Users/alfredchiesa/Development/titanium/Hivetrader/build/android/bin/assets/Resources/ht/views/globalViews.js
+[TRACE] COPYING CREATED FILE: /Users/alfredchiesa/Development/titanium/Hivetrader/Resources/ht/views/HoldingsEditView.js => /Users/alfredchiesa/Development/titanium/Hivetrader/build/android/bin/assets/Resources/ht/views/HoldingsEditView.js
+[TRACE] COPYING CREATED FILE: /Users/alfredchiesa/Development/titanium/Hivetrader/Resources/ht/views/HoldingsListView.js => /Users/alfredchiesa/Development/titanium/Hivetrader/build/android/bin/assets/Resources/ht/views/HoldingsListView.js
+[TRACE] COPYING CREATED FILE: /Users/alfredchiesa/Development/titanium/Hivetrader/Resources/ht/views/HoldingsView.js => /Users/alfredchiesa/Development/titanium/Hivetrader/build/android/bin/assets/Resources/ht/views/HoldingsView.js
+[TRACE] COPYING CREATED FILE: /Users/alfredchiesa/Development/titanium/Hivetrader/Resources/ht/views/HomeStatusDetailView.js => /Users/alfredchiesa/Development/titanium/Hivetrader/build/android/bin/assets/Resources/ht/views/HomeStatusDetailView.js
+[TRACE] COPYING CREATED FILE: /Users/alfredchiesa/Development/titanium/Hivetrader/Resources/ht/views/HomeView.js => /Users/alfredchiesa/Development/titanium/Hivetrader/build/android/bin/assets/Resources/ht/views/HomeView.js
+[TRACE] COPYING CREATED FILE: /Users/alfredchiesa/Development/titanium/Hivetrader/Resources/ht/views/HomeView.jss => /Users/alfredchiesa/Development/titanium/Hivetrader/build/android/bin/assets/Resources/ht/views/HomeView.jss
+[TRACE] COPYING CREATED FILE: /Users/alfredchiesa/Development/titanium/Hivetrader/Resources/ht/views/LargeButtonView.js => /Users/alfredchiesa/Development/titanium/Hivetrader/build/android/bin/assets/Resources/ht/views/LargeButtonView.js
+[TRACE] COPYING CREATED FILE: /Users/alfredchiesa/Development/titanium/Hivetrader/Resources/ht/views/MarketsView.js => /Users/alfredchiesa/Development/titanium/Hivetrader/build/android/bin/assets/Resources/ht/views/MarketsView.js
+[TRACE] COPYING CREATED FILE: /Users/alfredchiesa/Development/titanium/Hivetrader/Resources/ht/views/NetworkView.js => /Users/alfredchiesa/Development/titanium/Hivetrader/build/android/bin/assets/Resources/ht/views/NetworkView.js
+[TRACE] COPYING CREATED FILE: /Users/alfredchiesa/Development/titanium/Hivetrader/Resources/ht/views/PerformanceView.js => /Users/alfredchiesa/Development/titanium/Hivetrader/build/android/bin/assets/Resources/ht/views/PerformanceView.js
+[TRACE] COPYING CREATED FILE: /Users/alfredchiesa/Development/titanium/Hivetrader/Resources/ht/views/PortfolioView.js => /Users/alfredchiesa/Development/titanium/Hivetrader/build/android/bin/assets/Resources/ht/views/PortfolioView.js
+[TRACE] COPYING CREATED FILE: /Users/alfredchiesa/Development/titanium/Hivetrader/Resources/ht/views/SettingsView.js => /Users/alfredchiesa/Development/titanium/Hivetrader/build/android/bin/assets/Resources/ht/views/SettingsView.js
+[TRACE] COPYING CREATED FILE: /Users/alfredchiesa/Development/titanium/Hivetrader/Resources/ht/views/styles.js => /Users/alfredchiesa/Development/titanium/Hivetrader/build/android/bin/assets/Resources/ht/views/styles.js
+[TRACE] COPYING CREATED FILE: /Users/alfredchiesa/Development/titanium/Hivetrader/Resources/ht/views/views.js => /Users/alfredchiesa/Development/titanium/Hivetrader/build/android/bin/assets/Resources/ht/views/views.js
+[TRACE] COPYING CREATED FILE: /Users/alfredchiesa/Development/titanium/Hivetrader/Resources/images/arrow_down.png => /Users/alfredchiesa/Development/titanium/Hivetrader/build/android/bin/assets/Resources/images/arrow_down.png
+[TRACE] COPYING CREATED FILE: /Users/alfredchiesa/Development/titanium/Hivetrader/Resources/images/arrow_down@2x.png => /Users/alfredchiesa/Development/titanium/Hivetrader/build/android/bin/assets/Resources/images/arrow_down@2x.png
+[TRACE] COPYING CREATED FILE: /Users/alfredchiesa/Development/titanium/Hivetrader/Resources/images/arrow_up.png => /Users/alfredchiesa/Development/titanium/Hivetrader/build/android/bin/assets/Resources/images/arrow_up.png
+[TRACE] COPYING CREATED FILE: /Users/alfredchiesa/Development/titanium/Hivetrader/Resources/images/arrow_up@2x.png => /Users/alfredchiesa/Development/titanium/Hivetrader/build/android/bin/assets/Resources/images/arrow_up@2x.png
+[TRACE] COPYING CREATED FILE: /Users/alfredchiesa/Development/titanium/Hivetrader/Resources/images/back_button.png => /Users/alfredchiesa/Development/titanium/Hivetrader/build/android/bin/assets/Resources/images/back_button.png
+[TRACE] COPYING CREATED FILE: /Users/alfredchiesa/Development/titanium/Hivetrader/Resources/images/back_button@2x.png => /Users/alfredchiesa/Development/titanium/Hivetrader/build/android/bin/assets/Resources/images/back_button@2x.png
+[TRACE] COPYING CREATED FILE: /Users/alfredchiesa/Development/titanium/Hivetrader/Resources/images/bg_activity_feed_avatar.png => /Users/alfredchiesa/Development/titanium/Hivetrader/build/android/bin/assets/Resources/images/bg_activity_feed_avatar.png
+[TRACE] COPYING CREATED FILE: /Users/alfredchiesa/Development/titanium/Hivetrader/Resources/images/bg_activity_feed_avatar@2x.png => /Users/alfredchiesa/Development/titanium/Hivetrader/build/android/bin/assets/Resources/images/bg_activity_feed_avatar@2x.png
+[TRACE] COPYING CREATED FILE: /Users/alfredchiesa/Development/titanium/Hivetrader/Resources/images/bg_card_account_logo.png => /Users/alfredchiesa/Development/titanium/Hivetrader/build/android/bin/assets/Resources/images/bg_card_account_logo.png
+[TRACE] COPYING CREATED FILE: /Users/alfredchiesa/Development/titanium/Hivetrader/Resources/images/bg_card_account_logo@2x.png => /Users/alfredchiesa/Development/titanium/Hivetrader/build/android/bin/assets/Resources/images/bg_card_account_logo@2x.png
+[TRACE] COPYING CREATED FILE: /Users/alfredchiesa/Development/titanium/Hivetrader/Resources/images/bg_card_market_gain.png => /Users/alfredchiesa/Development/titanium/Hivetrader/build/android/bin/assets/Resources/images/bg_card_market_gain.png
+[TRACE] COPYING CREATED FILE: /Users/alfredchiesa/Development/titanium/Hivetrader/Resources/images/bg_card_market_gain@2x.png => /Users/alfredchiesa/Development/titanium/Hivetrader/build/android/bin/assets/Resources/images/bg_card_market_gain@2x.png
+[TRACE] COPYING CREATED FILE: /Users/alfredchiesa/Development/titanium/Hivetrader/Resources/images/bg_card_market_loss.png => /Users/alfredchiesa/Development/titanium/Hivetrader/build/android/bin/assets/Resources/images/bg_card_market_loss.png
+[TRACE] COPYING CREATED FILE: /Users/alfredchiesa/Development/titanium/Hivetrader/Resources/images/bg_card_market_loss@2x.png => /Users/alfredchiesa/Development/titanium/Hivetrader/build/android/bin/assets/Resources/images/bg_card_market_loss@2x.png
+[TRACE] COPYING CREATED FILE: /Users/alfredchiesa/Development/titanium/Hivetrader/Resources/images/bg_footer_message_bar.png => /Users/alfredchiesa/Development/titanium/Hivetrader/build/android/bin/assets/Resources/images/bg_footer_message_bar.png
+[TRACE] COPYING CREATED FILE: /Users/alfredchiesa/Development/titanium/Hivetrader/Resources/images/bg_footer_message_bar@2x.png => /Users/alfredchiesa/Development/titanium/Hivetrader/build/android/bin/assets/Resources/images/bg_footer_message_bar@2x.png
+[TRACE] COPYING CREATED FILE: /Users/alfredchiesa/Development/titanium/Hivetrader/Resources/images/bg_label_gain.png => /Users/alfredchiesa/Development/titanium/Hivetrader/build/android/bin/assets/Resources/images/bg_label_gain.png
+[TRACE] COPYING CREATED FILE: /Users/alfredchiesa/Development/titanium/Hivetrader/Resources/images/bg_label_gain@2x.png => /Users/alfredchiesa/Development/titanium/Hivetrader/build/android/bin/assets/Resources/images/bg_label_gain@2x.png
+[TRACE] COPYING CREATED FILE: /Users/alfredchiesa/Development/titanium/Hivetrader/Resources/images/bg_label_gain_perf.png => /Users/alfredchiesa/Development/titanium/Hivetrader/build/android/bin/assets/Resources/images/bg_label_gain_perf.png
+[TRACE] COPYING CREATED FILE: /Users/alfredchiesa/Development/titanium/Hivetrader/Resources/images/bg_label_gain_perf@2x.png => /Users/alfredchiesa/Development/titanium/Hivetrader/build/android/bin/assets/Resources/images/bg_label_gain_perf@2x.png
+[TRACE] COPYING CREATED FILE: /Users/alfredchiesa/Development/titanium/Hivetrader/Resources/images/bg_label_loss.png => /Users/alfredchiesa/Development/titanium/Hivetrader/build/android/bin/assets/Resources/images/bg_label_loss.png
+[TRACE] COPYING CREATED FILE: /Users/alfredchiesa/Development/titanium/Hivetrader/Resources/images/bg_label_loss@2x.png => /Users/alfredchiesa/Development/titanium/Hivetrader/build/android/bin/assets/Resources/images/bg_label_loss@2x.png
+[TRACE] COPYING CREATED FILE: /Users/alfredchiesa/Development/titanium/Hivetrader/Resources/images/bg_label_loss_perf.png => /Users/alfredchiesa/Development/titanium/Hivetrader/build/android/bin/assets/Resources/images/bg_label_loss_perf.png
+[TRACE] COPYING CREATED FILE: /Users/alfredchiesa/Development/titanium/Hivetrader/Resources/images/bg_label_loss_perf@2x.png => /Users/alfredchiesa/Development/titanium/Hivetrader/build/android/bin/assets/Resources/images/bg_label_loss_perf@2x.png
+[TRACE] COPYING CREATED FILE: /Users/alfredchiesa/Development/titanium/Hivetrader/Resources/images/bg_nav_repeat.png => /Users/alfredchiesa/Development/titanium/Hivetrader/build/android/bin/assets/Resources/images/bg_nav_repeat.png
+[TRACE] COPYING CREATED FILE: /Users/alfredchiesa/Development/titanium/Hivetrader/Resources/images/bg_nav_repeat@2x.png => /Users/alfredchiesa/Development/titanium/Hivetrader/build/android/bin/assets/Resources/images/bg_nav_repeat@2x.png
+[TRACE] COPYING CREATED FILE: /Users/alfredchiesa/Development/titanium/Hivetrader/Resources/images/bg_nav_vbar.png => /Users/alfredchiesa/Development/titanium/Hivetrader/build/android/bin/assets/Resources/images/bg_nav_vbar.png
+[TRACE] COPYING CREATED FILE: /Users/alfredchiesa/Development/titanium/Hivetrader/Resources/images/bg_nav_vbar@2x.png => /Users/alfredchiesa/Development/titanium/Hivetrader/build/android/bin/assets/Resources/images/bg_nav_vbar@2x.png
+[TRACE] COPYING CREATED FILE: /Users/alfredchiesa/Development/titanium/Hivetrader/Resources/images/bg_topbar.png => /Users/alfredchiesa/Development/titanium/Hivetrader/build/android/bin/assets/Resources/images/bg_topbar.png
+[TRACE] COPYING CREATED FILE: /Users/alfredchiesa/Development/titanium/Hivetrader/Resources/images/bg_topbar@2x.png => /Users/alfredchiesa/Development/titanium/Hivetrader/build/android/bin/assets/Resources/images/bg_topbar@2x.png
+[TRACE] COPYING CREATED FILE: /Users/alfredchiesa/Development/titanium/Hivetrader/Resources/images/bg_wallpaper.png => /Users/alfredchiesa/Development/titanium/Hivetrader/build/android/bin/assets/Resources/images/bg_wallpaper.png
+[TRACE] COPYING CREATED FILE: /Users/alfredchiesa/Development/titanium/Hivetrader/Resources/images/bg_wallpaper@2x.png => /Users/alfredchiesa/Development/titanium/Hivetrader/build/android/bin/assets/Resources/images/bg_wallpaper@2x.png
+[TRACE] COPYING CREATED FILE: /Users/alfredchiesa/Development/titanium/Hivetrader/Resources/images/btn_blue_flat.png => /Users/alfredchiesa/Development/titanium/Hivetrader/build/android/bin/assets/Resources/images/btn_blue_flat.png
+[TRACE] COPYING CREATED FILE: /Users/alfredchiesa/Development/titanium/Hivetrader/Resources/images/btn_blue_flat@2x.png => /Users/alfredchiesa/Development/titanium/Hivetrader/build/android/bin/assets/Resources/images/btn_blue_flat@2x.png
+[TRACE] COPYING CREATED FILE: /Users/alfredchiesa/Development/titanium/Hivetrader/Resources/images/btn_card_chart.png => /Users/alfredchiesa/Development/titanium/Hivetrader/build/android/bin/assets/Resources/images/btn_card_chart.png
+[TRACE] COPYING CREATED FILE: /Users/alfredchiesa/Development/titanium/Hivetrader/Resources/images/btn_card_chart@2x.png => /Users/alfredchiesa/Development/titanium/Hivetrader/build/android/bin/assets/Resources/images/btn_card_chart@2x.png
+[TRACE] COPYING CREATED FILE: /Users/alfredchiesa/Development/titanium/Hivetrader/Resources/images/btn_card_disconnect.png => /Users/alfredchiesa/Development/titanium/Hivetrader/build/android/bin/assets/Resources/images/btn_card_disconnect.png
+[TRACE] COPYING CREATED FILE: /Users/alfredchiesa/Development/titanium/Hivetrader/Resources/images/btn_card_disconnect@2x.png => /Users/alfredchiesa/Development/titanium/Hivetrader/build/android/bin/assets/Resources/images/btn_card_disconnect@2x.png
+[TRACE] COPYING CREATED FILE: /Users/alfredchiesa/Development/titanium/Hivetrader/Resources/images/btn_card_holdings.png => /Users/alfredchiesa/Development/titanium/Hivetrader/build/android/bin/assets/Resources/images/btn_card_holdings.png
+[TRACE] COPYING CREATED FILE: /Users/alfredchiesa/Development/titanium/Hivetrader/Resources/images/btn_card_holdings@2x.png => /Users/alfredchiesa/Development/titanium/Hivetrader/build/android/bin/assets/Resources/images/btn_card_holdings@2x.png
+[TRACE] COPYING CREATED FILE: /Users/alfredchiesa/Development/titanium/Hivetrader/Resources/images/btn_card_link.png => /Users/alfredchiesa/Development/titanium/Hivetrader/build/android/bin/assets/Resources/images/btn_card_link.png
+[TRACE] COPYING CREATED FILE: /Users/alfredchiesa/Development/titanium/Hivetrader/Resources/images/btn_card_link@2x.png => /Users/alfredchiesa/Development/titanium/Hivetrader/build/android/bin/assets/Resources/images/btn_card_link@2x.png
+[TRACE] COPYING CREATED FILE: /Users/alfredchiesa/Development/titanium/Hivetrader/Resources/images/btn_card_manage.png => /Users/alfredchiesa/Development/titanium/Hivetrader/build/android/bin/assets/Resources/images/btn_card_manage.png
+[TRACE] COPYING CREATED FILE: /Users/alfredchiesa/Development/titanium/Hivetrader/Resources/images/btn_card_manage@2x.png => /Users/alfredchiesa/Development/titanium/Hivetrader/build/android/bin/assets/Resources/images/btn_card_manage@2x.png
+[TRACE] COPYING CREATED FILE: /Users/alfredchiesa/Development/titanium/Hivetrader/Resources/images/btn_card_website.png => /Users/alfredchiesa/Development/titanium/Hivetrader/build/android/bin/assets/Resources/images/btn_card_website.png
+[TRACE] COPYING CREATED FILE: /Users/alfredchiesa/Development/titanium/Hivetrader/Resources/images/btn_card_website@2x.png => /Users/alfredchiesa/Development/titanium/Hivetrader/build/android/bin/assets/Resources/images/btn_card_website@2x.png
+[TRACE] COPYING CREATED FILE: /Users/alfredchiesa/Development/titanium/Hivetrader/Resources/images/btn_large_blue.png => /Users/alfredchiesa/Development/titanium/Hivetrader/build/android/bin/assets/Resources/images/btn_large_blue.png
+[TRACE] COPYING CREATED FILE: /Users/alfredchiesa/Development/titanium/Hivetrader/Resources/images/btn_large_blue@2x.png => /Users/alfredchiesa/Development/titanium/Hivetrader/build/android/bin/assets/Resources/images/btn_large_blue@2x.png
+[TRACE] COPYING CREATED FILE: /Users/alfredchiesa/Development/titanium/Hivetrader/Resources/images/btn_popular_service.png => /Users/alfredchiesa/Development/titanium/Hivetrader/build/android/bin/assets/Resources/images/btn_popular_service.png
+[TRACE] COPYING CREATED FILE: /Users/alfredchiesa/Development/titanium/Hivetrader/Resources/images/btn_popular_service@2x.png => /Users/alfredchiesa/Development/titanium/Hivetrader/build/android/bin/assets/Resources/images/btn_popular_service@2x.png
+[TRACE] COPYING CREATED FILE: /Users/alfredchiesa/Development/titanium/Hivetrader/Resources/images/button_graphic_accounts@2x.png => /Users/alfredchiesa/Development/titanium/Hivetrader/build/android/bin/assets/Resources/images/button_graphic_accounts@2x.png
+[TRACE] COPYING CREATED FILE: /Users/alfredchiesa/Development/titanium/Hivetrader/Resources/images/button_graphic_buzz@2x.png => /Users/alfredchiesa/Development/titanium/Hivetrader/build/android/bin/assets/Resources/images/button_graphic_buzz@2x.png
+[TRACE] COPYING CREATED FILE: /Users/alfredchiesa/Development/titanium/Hivetrader/Resources/images/button_graphic_compare@2x.png => /Users/alfredchiesa/Development/titanium/Hivetrader/build/android/bin/assets/Resources/images/button_graphic_compare@2x.png
+[TRACE] COPYING CREATED FILE: /Users/alfredchiesa/Development/titanium/Hivetrader/Resources/images/button_graphic_holdings@2x.png => /Users/alfredchiesa/Development/titanium/Hivetrader/build/android/bin/assets/Resources/images/button_graphic_holdings@2x.png
+[TRACE] COPYING CREATED FILE: /Users/alfredchiesa/Development/titanium/Hivetrader/Resources/images/button_graphic_markets@2x.png => /Users/alfredchiesa/Development/titanium/Hivetrader/build/android/bin/assets/Resources/images/button_graphic_markets@2x.png
+[TRACE] COPYING CREATED FILE: /Users/alfredchiesa/Development/titanium/Hivetrader/Resources/images/button_graphic_people@2x.png => /Users/alfredchiesa/Development/titanium/Hivetrader/build/android/bin/assets/Resources/images/button_graphic_people@2x.png
+[TRACE] COPYING CREATED FILE: /Users/alfredchiesa/Development/titanium/Hivetrader/Resources/images/button_graphic_performance@2x.png => /Users/alfredchiesa/Development/titanium/Hivetrader/build/android/bin/assets/Resources/images/button_graphic_performance@2x.png
+[TRACE] COPYING CREATED FILE: /Users/alfredchiesa/Development/titanium/Hivetrader/Resources/images/button_graphic_privacy@2x.png => /Users/alfredchiesa/Development/titanium/Hivetrader/build/android/bin/assets/Resources/images/button_graphic_privacy@2x.png
+[TRACE] COPYING CREATED FILE: /Users/alfredchiesa/Development/titanium/Hivetrader/Resources/images/button_graphic_profile@2x.png => /Users/alfredchiesa/Development/titanium/Hivetrader/build/android/bin/assets/Resources/images/button_graphic_profile@2x.png
+[TRACE] COPYING CREATED FILE: /Users/alfredchiesa/Development/titanium/Hivetrader/Resources/images/button_graphic_settings@2x.png => /Users/alfredchiesa/Development/titanium/Hivetrader/build/android/bin/assets/Resources/images/button_graphic_settings@2x.png
+[TRACE] COPYING CREATED FILE: /Users/alfredchiesa/Development/titanium/Hivetrader/Resources/images/button_graphic_symbols@2x.png => /Users/alfredchiesa/Development/titanium/Hivetrader/build/android/bin/assets/Resources/images/button_graphic_symbols@2x.png
+[TRACE] COPYING CREATED FILE: /Users/alfredchiesa/Development/titanium/Hivetrader/Resources/images/button_large_bg@2x.png => /Users/alfredchiesa/Development/titanium/Hivetrader/build/android/bin/assets/Resources/images/button_large_bg@2x.png
+[TRACE] COPYING CREATED FILE: /Users/alfredchiesa/Development/titanium/Hivetrader/Resources/images/button_large_bg_down@2x.png => /Users/alfredchiesa/Development/titanium/Hivetrader/build/android/bin/assets/Resources/images/button_large_bg_down@2x.png
+[TRACE] COPYING CREATED FILE: /Users/alfredchiesa/Development/titanium/Hivetrader/Resources/images/button_lrg_markets@2x.png => /Users/alfredchiesa/Development/titanium/Hivetrader/build/android/bin/assets/Resources/images/button_lrg_markets@2x.png
+[TRACE] COPYING CREATED FILE: /Users/alfredchiesa/Development/titanium/Hivetrader/Resources/images/flag_active.png => /Users/alfredchiesa/Development/titanium/Hivetrader/build/android/bin/assets/Resources/images/flag_active.png
+[TRACE] COPYING CREATED FILE: /Users/alfredchiesa/Development/titanium/Hivetrader/Resources/images/flag_active@2x.png => /Users/alfredchiesa/Development/titanium/Hivetrader/build/android/bin/assets/Resources/images/flag_active@2x.png
+[TRACE] COPYING CREATED FILE: /Users/alfredchiesa/Development/titanium/Hivetrader/Resources/images/flag_error.png => /Users/alfredchiesa/Development/titanium/Hivetrader/build/android/bin/assets/Resources/images/flag_error.png
+[TRACE] COPYING CREATED FILE: /Users/alfredchiesa/Development/titanium/Hivetrader/Resources/images/flag_error@2x.png => /Users/alfredchiesa/Development/titanium/Hivetrader/build/android/bin/assets/Resources/images/flag_error@2x.png
+[TRACE] COPYING CREATED FILE: /Users/alfredchiesa/Development/titanium/Hivetrader/Resources/images/flag_pending.png => /Users/alfredchiesa/Development/titanium/Hivetrader/build/android/bin/assets/Resources/images/flag_pending.png
+[TRACE] COPYING CREATED FILE: /Users/alfredchiesa/Development/titanium/Hivetrader/Resources/images/flag_pending@2x.png => /Users/alfredchiesa/Development/titanium/Hivetrader/build/android/bin/assets/Resources/images/flag_pending@2x.png
+[TRACE] COPYING CREATED FILE: /Users/alfredchiesa/Development/titanium/Hivetrader/Resources/images/flag_pill_active.png => /Users/alfredchiesa/Development/titanium/Hivetrader/build/android/bin/assets/Resources/images/flag_pill_active.png
+[TRACE] COPYING CREATED FILE: /Users/alfredchiesa/Development/titanium/Hivetrader/Resources/images/flag_pill_active@2x.png => /Users/alfredchiesa/Development/titanium/Hivetrader/build/android/bin/assets/Resources/images/flag_pill_active@2x.png
+[TRACE] COPYING CREATED FILE: /Users/alfredchiesa/Development/titanium/Hivetrader/Resources/images/flag_pill_BUY.png => /Users/alfredchiesa/Development/titanium/Hivetrader/build/android/bin/assets/Resources/images/flag_pill_BUY.png
+[TRACE] COPYING CREATED FILE: /Users/alfredchiesa/Development/titanium/Hivetrader/Resources/images/flag_pill_BUY@2x.png => /Users/alfredchiesa/Development/titanium/Hivetrader/build/android/bin/assets/Resources/images/flag_pill_BUY@2x.png
+[TRACE] COPYING CREATED FILE: /Users/alfredchiesa/Development/titanium/Hivetrader/Resources/images/flag_pill_error.png => /Users/alfredchiesa/Development/titanium/Hivetrader/build/android/bin/assets/Resources/images/flag_pill_error.png
+[TRACE] COPYING CREATED FILE: /Users/alfredchiesa/Development/titanium/Hivetrader/Resources/images/flag_pill_error@2x.png => /Users/alfredchiesa/Development/titanium/Hivetrader/build/android/bin/assets/Resources/images/flag_pill_error@2x.png
+[TRACE] COPYING CREATED FILE: /Users/alfredchiesa/Development/titanium/Hivetrader/Resources/images/flag_pill_pending.png => /Users/alfredchiesa/Development/titanium/Hivetrader/build/android/bin/assets/Resources/images/flag_pill_pending.png
+[TRACE] COPYING CREATED FILE: /Users/alfredchiesa/Development/titanium/Hivetrader/Resources/images/flag_pill_pending@2x.png => /Users/alfredchiesa/Development/titanium/Hivetrader/build/android/bin/assets/Resources/images/flag_pill_pending@2x.png
+[TRACE] COPYING CREATED FILE: /Users/alfredchiesa/Development/titanium/Hivetrader/Resources/images/flag_pill_SELL.png => /Users/alfredchiesa/Development/titanium/Hivetrader/build/android/bin/assets/Resources/images/flag_pill_SELL.png
+[TRACE] COPYING CREATED FILE: /Users/alfredchiesa/Development/titanium/Hivetrader/Resources/images/flag_pill_SELL@2x.png => /Users/alfredchiesa/Development/titanium/Hivetrader/build/android/bin/assets/Resources/images/flag_pill_SELL@2x.png
+[TRACE] COPYING CREATED FILE: /Users/alfredchiesa/Development/titanium/Hivetrader/Resources/images/flat_pill_timestamp.png => /Users/alfredchiesa/Development/titanium/Hivetrader/build/android/bin/assets/Resources/images/flat_pill_timestamp.png
+[TRACE] COPYING CREATED FILE: /Users/alfredchiesa/Development/titanium/Hivetrader/Resources/images/flat_pill_timestamp@2x.png => /Users/alfredchiesa/Development/titanium/Hivetrader/build/android/bin/assets/Resources/images/flat_pill_timestamp@2x.png
+[TRACE] COPYING CREATED FILE: /Users/alfredchiesa/Development/titanium/Hivetrader/Resources/images/icon_add.png => /Users/alfredchiesa/Development/titanium/Hivetrader/build/android/bin/assets/Resources/images/icon_add.png
+[TRACE] COPYING CREATED FILE: /Users/alfredchiesa/Development/titanium/Hivetrader/Resources/images/icon_add@2x.png => /Users/alfredchiesa/Development/titanium/Hivetrader/build/android/bin/assets/Resources/images/icon_add@2x.png
+[TRACE] COPYING CREATED FILE: /Users/alfredchiesa/Development/titanium/Hivetrader/Resources/images/icon_refresh.png => /Users/alfredchiesa/Development/titanium/Hivetrader/build/android/bin/assets/Resources/images/icon_refresh.png
+[TRACE] COPYING CREATED FILE: /Users/alfredchiesa/Development/titanium/Hivetrader/Resources/images/icon_refresh@2x.png => /Users/alfredchiesa/Development/titanium/Hivetrader/build/android/bin/assets/Resources/images/icon_refresh@2x.png
+[TRACE] COPYING CREATED FILE: /Users/alfredchiesa/Development/titanium/Hivetrader/Resources/images/icon_secure.png => /Users/alfredchiesa/Development/titanium/Hivetrader/build/android/bin/assets/Resources/images/icon_secure.png
+[TRACE] COPYING CREATED FILE: /Users/alfredchiesa/Development/titanium/Hivetrader/Resources/images/icon_secure@2x.png => /Users/alfredchiesa/Development/titanium/Hivetrader/build/android/bin/assets/Resources/images/icon_secure@2x.png
+[TRACE] COPYING CREATED FILE: /Users/alfredchiesa/Development/titanium/Hivetrader/Resources/images/message_link_arrow.png => /Users/alfredchiesa/Development/titanium/Hivetrader/build/android/bin/assets/Resources/images/message_link_arrow.png
+[TRACE] COPYING CREATED FILE: /Users/alfredchiesa/Development/titanium/Hivetrader/Resources/images/message_link_arrow@2x.png => /Users/alfredchiesa/Development/titanium/Hivetrader/build/android/bin/assets/Resources/images/message_link_arrow@2x.png
+[TRACE] COPYING CREATED FILE: /Users/alfredchiesa/Development/titanium/Hivetrader/Resources/images/nav_active.png => /Users/alfredchiesa/Development/titanium/Hivetrader/build/android/bin/assets/Resources/images/nav_active.png
+[TRACE] COPYING CREATED FILE: /Users/alfredchiesa/Development/titanium/Hivetrader/Resources/images/nav_active@2x.png => /Users/alfredchiesa/Development/titanium/Hivetrader/build/android/bin/assets/Resources/images/nav_active@2x.png
+[TRACE] COPYING CREATED FILE: /Users/alfredchiesa/Development/titanium/Hivetrader/Resources/images/no_avatar.png => /Users/alfredchiesa/Development/titanium/Hivetrader/build/android/bin/assets/Resources/images/no_avatar.png
+[TRACE] COPYING CREATED FILE: /Users/alfredchiesa/Development/titanium/Hivetrader/Resources/images/no_avatar@2x.png => /Users/alfredchiesa/Development/titanium/Hivetrader/build/android/bin/assets/Resources/images/no_avatar@2x.png
+[TRACE] COPYING CREATED FILE: /Users/alfredchiesa/Development/titanium/Hivetrader/Resources/images/secure_bee_safe.png => /Users/alfredchiesa/Development/titanium/Hivetrader/build/android/bin/assets/Resources/images/secure_bee_safe.png
+[TRACE] COPYING CREATED FILE: /Users/alfredchiesa/Development/titanium/Hivetrader/Resources/images/secure_bee_safe@2x.png => /Users/alfredchiesa/Development/titanium/Hivetrader/build/android/bin/assets/Resources/images/secure_bee_safe@2x.png
+[TRACE] COPYING CREATED FILE: /Users/alfredchiesa/Development/titanium/Hivetrader/Resources/images/square_button.png => /Users/alfredchiesa/Development/titanium/Hivetrader/build/android/bin/assets/Resources/images/square_button.png
+[TRACE] COPYING CREATED FILE: /Users/alfredchiesa/Development/titanium/Hivetrader/Resources/images/square_button@2x.png => /Users/alfredchiesa/Development/titanium/Hivetrader/build/android/bin/assets/Resources/images/square_button@2x.png
+[TRACE] COPYING CREATED FILE: /Users/alfredchiesa/Development/titanium/Hivetrader/Resources/images/tab_holdings.png => /Users/alfredchiesa/Development/titanium/Hivetrader/build/android/bin/assets/Resources/images/tab_holdings.png
+[TRACE] COPYING CREATED FILE: /Users/alfredchiesa/Development/titanium/Hivetrader/Resources/images/tab_holdings_on.png => /Users/alfredchiesa/Development/titanium/Hivetrader/build/android/bin/assets/Resources/images/tab_holdings_on.png
+[TRACE] COPYING CREATED FILE: /Users/alfredchiesa/Development/titanium/Hivetrader/Resources/images/tab_home.png => /Users/alfredchiesa/Development/titanium/Hivetrader/build/android/bin/assets/Resources/images/tab_home.png
+[TRACE] COPYING CREATED FILE: /Users/alfredchiesa/Development/titanium/Hivetrader/Resources/images/tab_home@2x.png => /Users/alfredchiesa/Development/titanium/Hivetrader/build/android/bin/assets/Resources/images/tab_home@2x.png
+[TRACE] COPYING CREATED FILE: /Users/alfredchiesa/Development/titanium/Hivetrader/Resources/images/tab_home_on.png => /Users/alfredchiesa/Development/titanium/Hivetrader/build/android/bin/assets/Resources/images/tab_home_on.png
+[TRACE] COPYING CREATED FILE: /Users/alfredchiesa/Development/titanium/Hivetrader/Resources/images/tab_home_on@2x.png => /Users/alfredchiesa/Development/titanium/Hivetrader/build/android/bin/assets/Resources/images/tab_home_on@2x.png
+[TRACE] COPYING CREATED FILE: /Users/alfredchiesa/Development/titanium/Hivetrader/Resources/images/tab_market.png => /Users/alfredchiesa/Development/titanium/Hivetrader/build/android/bin/assets/Resources/images/tab_market.png
+[TRACE] COPYING CREATED FILE: /Users/alfredchiesa/Development/titanium/Hivetrader/Resources/images/tab_market@2x.png => /Users/alfredchiesa/Development/titanium/Hivetrader/build/android/bin/assets/Resources/images/tab_market@2x.png
+[TRACE] COPYING CREATED FILE: /Users/alfredchiesa/Development/titanium/Hivetrader/Resources/images/tab_market_on.png => /Users/alfredchiesa/Development/titanium/Hivetrader/build/android/bin/assets/Resources/images/tab_market_on.png
+[TRACE] COPYING CREATED FILE: /Users/alfredchiesa/Development/titanium/Hivetrader/Resources/images/tab_market_on@2x.png => /Users/alfredchiesa/Development/titanium/Hivetrader/build/android/bin/assets/Resources/images/tab_market_on@2x.png
+[TRACE] COPYING CREATED FILE: /Users/alfredchiesa/Development/titanium/Hivetrader/Resources/images/tab_network.png => /Users/alfredchiesa/Development/titanium/Hivetrader/build/android/bin/assets/Resources/images/tab_network.png
+[TRACE] COPYING CREATED FILE: /Users/alfredchiesa/Development/titanium/Hivetrader/Resources/images/tab_network@2x.png => /Users/alfredchiesa/Development/titanium/Hivetrader/build/android/bin/assets/Resources/images/tab_network@2x.png
+[TRACE] COPYING CREATED FILE: /Users/alfredchiesa/Development/titanium/Hivetrader/Resources/images/tab_network_on.png => /Users/alfredchiesa/Development/titanium/Hivetrader/build/android/bin/assets/Resources/images/tab_network_on.png
+[TRACE] COPYING CREATED FILE: /Users/alfredchiesa/Development/titanium/Hivetrader/Resources/images/tab_network_on@2x.png => /Users/alfredchiesa/Development/titanium/Hivetrader/build/android/bin/assets/Resources/images/tab_network_on@2x.png
+[TRACE] COPYING CREATED FILE: /Users/alfredchiesa/Development/titanium/Hivetrader/Resources/images/tab_performance.png => /Users/alfredchiesa/Development/titanium/Hivetrader/build/android/bin/assets/Resources/images/tab_performance.png
+[TRACE] COPYING CREATED FILE: /Users/alfredchiesa/Development/titanium/Hivetrader/Resources/images/tab_performance@2x.png => /Users/alfredchiesa/Development/titanium/Hivetrader/build/android/bin/assets/Resources/images/tab_performance@2x.png
+[TRACE] COPYING CREATED FILE: /Users/alfredchiesa/Development/titanium/Hivetrader/Resources/images/tab_performance_on.png => /Users/alfredchiesa/Development/titanium/Hivetrader/build/android/bin/assets/Resources/images/tab_performance_on.png
+[TRACE] COPYING CREATED FILE: /Users/alfredchiesa/Development/titanium/Hivetrader/Resources/images/tab_performance_on@2x.png => /Users/alfredchiesa/Development/titanium/Hivetrader/build/android/bin/assets/Resources/images/tab_performance_on@2x.png
+[TRACE] COPYING CREATED FILE: /Users/alfredchiesa/Development/titanium/Hivetrader/Resources/images/tab_portfolio.png => /Users/alfredchiesa/Development/titanium/Hivetrader/build/android/bin/assets/Resources/images/tab_portfolio.png
+[TRACE] COPYING CREATED FILE: /Users/alfredchiesa/Development/titanium/Hivetrader/Resources/images/tab_portfolio@2x.png => /Users/alfredchiesa/Development/titanium/Hivetrader/build/android/bin/assets/Resources/images/tab_portfolio@2x.png
+[TRACE] COPYING CREATED FILE: /Users/alfredchiesa/Development/titanium/Hivetrader/Resources/images/tab_portfolio_on.png => /Users/alfredchiesa/Development/titanium/Hivetrader/build/android/bin/assets/Resources/images/tab_portfolio_on.png
+[TRACE] COPYING CREATED FILE: /Users/alfredchiesa/Development/titanium/Hivetrader/Resources/images/tab_portfolio_on@2x.png => /Users/alfredchiesa/Development/titanium/Hivetrader/build/android/bin/assets/Resources/images/tab_portfolio_on@2x.png
+[TRACE] COPYING CREATED FILE: /Users/alfredchiesa/Development/titanium/Hivetrader/Resources/images/tab_settings.png => /Users/alfredchiesa/Development/titanium/Hivetrader/build/android/bin/assets/Resources/images/tab_settings.png
+[TRACE] COPYING CREATED FILE: /Users/alfredchiesa/Development/titanium/Hivetrader/Resources/images/tab_settings@2x.png => /Users/alfredchiesa/Development/titanium/Hivetrader/build/android/bin/assets/Resources/images/tab_settings@2x.png
+[TRACE] COPYING CREATED FILE: /Users/alfredchiesa/Development/titanium/Hivetrader/Resources/images/tab_settings_on.png => /Users/alfredchiesa/Development/titanium/Hivetrader/build/android/bin/assets/Resources/images/tab_settings_on.png
+[TRACE] COPYING CREATED FILE: /Users/alfredchiesa/Development/titanium/Hivetrader/Resources/images/tab_settings_on@2x.png => /Users/alfredchiesa/Development/titanium/Hivetrader/build/android/bin/assets/Resources/images/tab_settings_on@2x.png
+[TRACE] COPYING CREATED FILE: /Users/alfredchiesa/Development/titanium/Hivetrader/Resources/images/tablerow_arrow.png => /Users/alfredchiesa/Development/titanium/Hivetrader/build/android/bin/assets/Resources/images/tablerow_arrow.png
+[TRACE] COPYING CREATED FILE: /Users/alfredchiesa/Development/titanium/Hivetrader/Resources/images/tablerow_arrow@2x.png => /Users/alfredchiesa/Development/titanium/Hivetrader/build/android/bin/assets/Resources/images/tablerow_arrow@2x.png
+[TRACE] COPYING CREATED FILE: /Users/alfredchiesa/Development/titanium/Hivetrader/Resources/images/thinkorswim_logo.png => /Users/alfredchiesa/Development/titanium/Hivetrader/build/android/bin/assets/Resources/images/thinkorswim_logo.png
+[TRACE] COPYING CREATED FILE: /Users/alfredchiesa/Development/titanium/Hivetrader/Resources/images/thinkorswim_logo@2x.png => /Users/alfredchiesa/Development/titanium/Hivetrader/build/android/bin/assets/Resources/images/thinkorswim_logo@2x.png
+[TRACE] COPYING CREATED FILE: /Users/alfredchiesa/Development/titanium/Hivetrader/Resources/KS_nav_ui.png => /Users/alfredchiesa/Development/titanium/Hivetrader/build/android/bin/assets/Resources/KS_nav_ui.png
+[TRACE] COPYING CREATED FILE: /Users/alfredchiesa/Development/titanium/Hivetrader/Resources/KS_nav_views.png => /Users/alfredchiesa/Development/titanium/Hivetrader/build/android/bin/assets/Resources/KS_nav_views.png
+[TRACE] Generating Java Classes
+[DEBUG] Processing Android resource drawables
+[TRACE] COPYING FILE: /Users/alfredchiesa/Development/titanium/Hivetrader/Resources/android/images/res-long-land-hdpi/default.png => /Users/alfredchiesa/Development/titanium/Hivetrader/build/android/res/drawable-long-land-hdpi/default_d44e27d97b.png
+[TRACE] COPYING FILE: /Users/alfredchiesa/Development/titanium/Hivetrader/Resources/android/images/res-long-land-ldpi/default.png => /Users/alfredchiesa/Development/titanium/Hivetrader/build/android/res/drawable-long-land-ldpi/default_d44e27d97b.png
+[TRACE] COPYING FILE: /Users/alfredchiesa/Development/titanium/Hivetrader/Resources/android/images/res-long-port-hdpi/default.png => /Users/alfredchiesa/Development/titanium/Hivetrader/build/android/res/drawable-long-port-hdpi/default_d44e27d97b.png
+[TRACE] COPYING FILE: /Users/alfredchiesa/Development/titanium/Hivetrader/Resources/android/images/res-long-port-ldpi/default.png => /Users/alfredchiesa/Development/titanium/Hivetrader/build/android/res/drawable-long-port-ldpi/default_d44e27d97b.png
+[TRACE] COPYING FILE: /Users/alfredchiesa/Development/titanium/Hivetrader/Resources/android/images/res-notlong-land-hdpi/default.png => /Users/alfredchiesa/Development/titanium/Hivetrader/build/android/res/drawable-notlong-land-hdpi/default_d44e27d97b.png
+[TRACE] COPYING FILE: /Users/alfredchiesa/Development/titanium/Hivetrader/Resources/android/images/res-notlong-land-ldpi/default.png => /Users/alfredchiesa/Development/titanium/Hivetrader/build/android/res/drawable-notlong-land-ldpi/default_d44e27d97b.png
+[TRACE] COPYING FILE: /Users/alfredchiesa/Development/titanium/Hivetrader/Resources/android/images/res-notlong-land-mdpi/default.png => /Users/alfredchiesa/Development/titanium/Hivetrader/build/android/res/drawable-notlong-land-mdpi/default_d44e27d97b.png
+[TRACE] COPYING FILE: /Users/alfredchiesa/Development/titanium/Hivetrader/Resources/android/images/res-notlong-port-hdpi/default.png => /Users/alfredchiesa/Development/titanium/Hivetrader/build/android/res/drawable-notlong-port-hdpi/default_d44e27d97b.png
+[TRACE] COPYING FILE: /Users/alfredchiesa/Development/titanium/Hivetrader/Resources/android/images/res-notlong-port-ldpi/default.png => /Users/alfredchiesa/Development/titanium/Hivetrader/build/android/res/drawable-notlong-port-ldpi/default_d44e27d97b.png
+[TRACE] COPYING FILE: /Users/alfredchiesa/Development/titanium/Hivetrader/Resources/android/images/res-notlong-port-mdpi/default.png => /Users/alfredchiesa/Development/titanium/Hivetrader/build/android/res/drawable-notlong-port-mdpi/default_d44e27d97b.png
+[DEBUG] copying app icon: /Users/alfredchiesa/Development/titanium/Hivetrader/build/android/bin/assets/Resources/appicon.png
+[DEBUG] generating theme.xml
+[DEBUG] found drawable-long-land-hdpi splash screen at /Users/alfredchiesa/Development/titanium/Hivetrader/Resources/android/images/res-long-land-hdpi/default.png
+[DEBUG] copying /Users/alfredchiesa/Development/titanium/Hivetrader/Resources/android/images/res-long-land-hdpi/default.png splash screen to /Users/alfredchiesa/Development/titanium/Hivetrader/build/android/res/drawable-long-land-hdpi/background.png
+[DEBUG] found drawable-long-land-ldpi splash screen at /Users/alfredchiesa/Development/titanium/Hivetrader/Resources/android/images/res-long-land-ldpi/default.png
+[DEBUG] copying /Users/alfredchiesa/Development/titanium/Hivetrader/Resources/android/images/res-long-land-ldpi/default.png splash screen to /Users/alfredchiesa/Development/titanium/Hivetrader/build/android/res/drawable-long-land-ldpi/background.png
+[DEBUG] found drawable-long-port-hdpi splash screen at /Users/alfredchiesa/Development/titanium/Hivetrader/Resources/android/images/res-long-port-hdpi/default.png
+[DEBUG] copying /Users/alfredchiesa/Development/titanium/Hivetrader/Resources/android/images/res-long-port-hdpi/default.png splash screen to /Users/alfredchiesa/Development/titanium/Hivetrader/build/android/res/drawable-long-port-hdpi/background.png
+[DEBUG] found drawable-long-port-ldpi splash screen at /Users/alfredchiesa/Development/titanium/Hivetrader/Resources/android/images/res-long-port-ldpi/default.png
+[DEBUG] copying /Users/alfredchiesa/Development/titanium/Hivetrader/Resources/android/images/res-long-port-ldpi/default.png splash screen to /Users/alfredchiesa/Development/titanium/Hivetrader/build/android/res/drawable-long-port-ldpi/background.png
+[DEBUG] found drawable-notlong-land-hdpi splash screen at /Users/alfredchiesa/Development/titanium/Hivetrader/Resources/android/images/res-notlong-land-hdpi/default.png
+[DEBUG] copying /Users/alfredchiesa/Development/titanium/Hivetrader/Resources/android/images/res-notlong-land-hdpi/default.png splash screen to /Users/alfredchiesa/Development/titanium/Hivetrader/build/android/res/drawable-notlong-land-hdpi/background.png
+[DEBUG] found drawable-notlong-land-ldpi splash screen at /Users/alfredchiesa/Development/titanium/Hivetrader/Resources/android/images/res-notlong-land-ldpi/default.png
+[DEBUG] copying /Users/alfredchiesa/Development/titanium/Hivetrader/Resources/android/images/res-notlong-land-ldpi/default.png splash screen to /Users/alfredchiesa/Development/titanium/Hivetrader/build/android/res/drawable-notlong-land-ldpi/background.png
+[DEBUG] found drawable-notlong-land-mdpi splash screen at /Users/alfredchiesa/Development/titanium/Hivetrader/Resources/android/images/res-notlong-land-mdpi/default.png
+[DEBUG] copying /Users/alfredchiesa/Development/titanium/Hivetrader/Resources/android/images/res-notlong-land-mdpi/default.png splash screen to /Users/alfredchiesa/Development/titanium/Hivetrader/build/android/res/drawable-notlong-land-mdpi/background.png
+[DEBUG] found drawable-notlong-port-hdpi splash screen at /Users/alfredchiesa/Development/titanium/Hivetrader/Resources/android/images/res-notlong-port-hdpi/default.png
+[DEBUG] copying /Users/alfredchiesa/Development/titanium/Hivetrader/Resources/android/images/res-notlong-port-hdpi/default.png splash screen to /Users/alfredchiesa/Development/titanium/Hivetrader/build/android/res/drawable-notlong-port-hdpi/background.png
+[DEBUG] found drawable-notlong-port-ldpi splash screen at /Users/alfredchiesa/Development/titanium/Hivetrader/Resources/android/images/res-notlong-port-ldpi/default.png
+[DEBUG] copying /Users/alfredchiesa/Development/titanium/Hivetrader/Resources/android/images/res-notlong-port-ldpi/default.png splash screen to /Users/alfredchiesa/Development/titanium/Hivetrader/build/android/res/drawable-notlong-port-ldpi/background.png
+[DEBUG] found drawable-notlong-port-mdpi splash screen at /Users/alfredchiesa/Development/titanium/Hivetrader/Resources/android/images/res-notlong-port-mdpi/default.png
+[DEBUG] copying /Users/alfredchiesa/Development/titanium/Hivetrader/Resources/android/images/res-notlong-port-mdpi/default.png splash screen to /Users/alfredchiesa/Development/titanium/Hivetrader/build/android/res/drawable-notlong-port-mdpi/background.png
+[DEBUG] found splash screen at /Users/alfredchiesa/Development/titanium/Hivetrader/build/android/bin/assets/Resources/default.png
+[TRACE] Writing out AndroidManifest.xml
+[DEBUG] adding /Users/alfredchiesa/Development/titanium/Hivetrader/build/android/gen/com/hivetraderllc/hivetrader/ApplicationStylesheet.java to javac build list
+[DEBUG] adding /Users/alfredchiesa/Development/titanium/Hivetrader/build/android/gen/com/hivetraderllc/hivetrader/HivetraderActivity.java to javac build list
+[DEBUG] adding /Users/alfredchiesa/Development/titanium/Hivetrader/build/android/gen/com/hivetraderllc/hivetrader/HivetraderAppInfo.java to javac build list
+[DEBUG] adding /Users/alfredchiesa/Development/titanium/Hivetrader/build/android/gen/com/hivetraderllc/hivetrader/HivetraderApplication.java to javac build list
+[DEBUG] adding /Users/alfredchiesa/Development/titanium/Hivetrader/build/android/gen/com/hivetraderllc/hivetrader/R.java to javac build list
+[DEBUG] Building Java Sources: "/Users/alfredchiesa/Development/titanium/Hivetrader/build/android/gen/com/hivetraderllc/hivetrader/ApplicationStylesheet.java" "/Users/alfredchiesa/Development/titanium/Hivetrader/build/android/gen/com/hivetraderllc/hivetrader/HivetraderActivity.java" "/Users/alfredchiesa/Development/titanium/Hivetrader/build/android/gen/com/hivetraderllc/hivetrader/HivetraderAppInfo.java" "/Users/alfredchiesa/Development/titanium/Hivetrader/build/android/gen/com/hivetraderllc/hivetrader/HivetraderApplication.java" "/Users/alfredchiesa/Development/titanium/Hivetrader/build/android/gen/com/hivetraderllc/hivetrader/R.java"
+[ERROR] Error(s) compiling generated Java code
+[ERROR] /Users/alfredchiesa/Development/titanium/Hivetrader/build/android/gen/com/hivetraderllc/hivetrader/ApplicationStylesheet.java:23: ';' expected
+		KrollDict app_classesMap_base-window = new KrollDict();
+		                             ^
+/Users/alfredchiesa/Development/titanium/Hivetrader/build/android/gen/com/hivetraderllc/hivetrader/ApplicationStylesheet.java:25: not a statement
+		app_classesMap_base-window.put("barColor","#493a24");
+		                   ^
+/Users/alfredchiesa/Development/titanium/Hivetrader/build/android/gen/com/hivetraderllc/hivetrader/ApplicationStylesheet.java:26: not a statement
+		app_classesMap_base-window.put("barImage","images/bg_topbar.png");
+		                   ^
+/Users/alfredchiesa/Development/titanium/Hivetrader/build/android/gen/com/hivetraderllc/hivetrader/ApplicationStylesheet.java:27: not a statement
+		app_classesMap_base-window.put("backgroundColor","#e1ddd4");
+		                   ^
+/Users/alfredchiesa/Development/titanium/Hivetrader/build/android/gen/com/hivetraderllc/hivetrader/ApplicationStylesheet.java:31: ';' expected
+		KrollDict app_classesMap_followed-row = new KrollDict();
+		                                 ^
+/Users/alfredchiesa/Development/titanium/Hivetrader/build/android/gen/com/hivetraderllc/hivetrader/ApplicationStylesheet.java:33: not a statement
+		app_classesMap_followed-row.put("borderWidth","10");
+		                       ^
+/Users/alfredchiesa/Development/titanium/Hivetrader/build/android/gen/com/hivetraderllc/hivetrader/ApplicationStylesheet.java:40: ';' expected
+		KrollDict HomeView_classesMap_base-window = new KrollDict();
+		                                  ^
+/Users/alfredchiesa/Development/titanium/Hivetrader/build/android/gen/com/hivetraderllc/hivetrader/ApplicationStylesheet.java:42: not a statement
+		HomeView_classesMap_base-window.put("barColor","#493a24");
+		                        ^
+/Users/alfredchiesa/Development/titanium/Hivetrader/build/android/gen/com/hivetraderllc/hivetrader/ApplicationStylesheet.java:43: not a statement
+		HomeView_classesMap_base-window.put("barImage","images/bg_topbar.png");
+		                        ^
+/Users/alfredchiesa/Development/titanium/Hivetrader/build/android/gen/com/hivetraderllc/hivetrader/ApplicationStylesheet.java:44: not a statement
+		HomeView_classesMap_base-window.put("backgroundColor","#e1ddd4");
+		                        ^
+/Users/alfredchiesa/Development/titanium/Hivetrader/build/android/gen/com/hivetraderllc/hivetrader/ApplicationStylesheet.java:48: ';' expected
+		KrollDict HomeView_classesMap_followed-row = new KrollDict();
+		                                      ^
+/Users/alfredchiesa/Development/titanium/Hivetrader/build/android/gen/com/hivetraderllc/hivetrader/ApplicationStylesheet.java:50: not a statement
+		HomeView_classesMap_followed-row.put("borderWidth","10");
+		                            ^
+12 errors
+
