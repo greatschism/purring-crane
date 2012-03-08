@@ -50,6 +50,8 @@
 		}
 	};
 	
+	HT.osname = Ti.Platform.osname;
+	
 })();  
 
 Ti.include(
