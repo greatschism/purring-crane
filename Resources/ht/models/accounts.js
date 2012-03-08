@@ -13,20 +13,22 @@
 		db.close();
 	};
 	
-	HT.Model.getAccounts = function() {
-	  var results = [];
+	HT.Model.getAccounts = function(){
+		var results = [];
+		
 		var db = HT.Model.install();
-		Ti.API.info("the database is installed and selected.");
 		
 		//get the accounts
 		var rows = db.execute('SELECT DISTINCT name FROM accounts');
     
-    while (rows.isValidRow()) {
-      results.push({name: '' + rows.fieldByName('name') + ''});
-      rows.next();
-    }
-    db.close();
-    return results;
+    	while (rows.isValidRow()){
+    		results.push({name: '' + rows.fieldByName('name') + ''});
+    		rows.next();
+    	}
+    	
+    	db.close();
+    	
+    	return results;
 	};
 	
 })();
