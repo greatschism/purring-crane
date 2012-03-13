@@ -253,4 +253,3 @@ HT.base = HT.View.createApplicationWindow();
 
 // Launch the app!
 HT.base.open();
-alert("Connected to DEBUG db.");
