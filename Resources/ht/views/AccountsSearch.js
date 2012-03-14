@@ -84,21 +84,22 @@
 		var secureTitleView = win.HT.View.secureTitle({
 			title : "Add Account"
 		});
-		var backButton = win.HT.View.customBackButton({});
+		//var backButton = win.HT.View.customBackButton({});
 		var AccountCredsWindow = Titanium.UI.createWindow(win.HT.combine(styles.BaseWindow, styles.YellowGradientWindow, {
 			title : "Add Account",
 			url : "/ht/views/AccountsCredentials.js",
 			HT : win.HT,
 			_accountName : _title,
-			titleControl : secureTitleView,
-			leftNavButton : backButton
+			titleControl : secureTitleView
 		}));
 
+		Ti.API.debug('rowData: ' + JSON.stringify(rowData));
+		
 		Titanium.UI.currentTab.open(AccountCredsWindow);
 
-		backButton.addEventListener('click', function() {
-			AccountCredsWindow.close();
-		});
+		// backButton.addEventListener('click', function() {
+			// AccountCredsWindow.close();
+		// });
 	});
 
 
@@ -188,7 +189,7 @@
 	});
 
 	SearchView.addEventListener('change', function(e) {
-		Titanium.API.info('search bar: ' + e.value);
+		Titanium.API.debug('search bar: ' + e.value);
 
 		if(e.value.length > 1) {
 

@@ -28,15 +28,8 @@
   ===============
   For organization's sake we'll keep all the windows we'll use in this section defined here.
   */
-  var secureTitleView = win.HT.View.secureTitle({title: "Add Account"});
-  var AddEditHoldingsWindow = Titanium.UI.createWindow(
-      win.HT.combine(styles.BaseWindow, styles.YellowGradientWindow, {
-        title: "Add Holdings",
-        HT: win.HT,
-        titleControl: secureTitleView,
-        url: "/ht/views/HoldingsListView.js"
-      })
-  );
+  var AddEditHoldingsWindow = require('/ht/views/HoldingsListView');
+  var AddEditHoldingsWindow = new AddEditHoldingsWindow({HT:win.HT});
   
   var view = Titanium.UI.createView({
     width: platformWidth,
@@ -110,12 +103,6 @@
   
   ContinueButton.addEventListener("click", function() {
     var nickname = NicknameTextField.value;
-    var BackButton = win.HT.View.customBackButton({title: "Back"});
-    AddEditHoldingsWindow.leftNavButton = BackButton;
-    
-    BackButton.addEventListener("click", function(e) {
-      AddEditHoldingsWindow.close();
-    });
     
     if (nickname === "") {
       alert("Please choose a nickname.");
