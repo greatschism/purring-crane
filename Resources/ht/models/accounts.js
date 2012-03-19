@@ -1,15 +1,7 @@
 (function() {
 	
-	HT.Model._dbname = 'ht_db';
-	
-	if(HT.osname == 'android'){
-		HT.Model._dbpath = "/leadsManager.db";
-	}else{
-		HT.Model._dbpath = "leadsManager.db";
-	}
-	
 	HT.Model.install = function(){
-		var db = Ti.Database.install(HT.Model._dbpath, HT.Model._dbname);
+		var db = Ti.Database.install(Ti.Filesystem.getResourcesDirectory() + '/hivetrader.sqlite', 'accounts');
 		db.close();
 	};
 	

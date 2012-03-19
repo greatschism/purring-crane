@@ -3,6 +3,7 @@
 // Copyright: ©2011 Hivetrader
 // ==========================================================================
 
+
 (function() {
   // Local variables.
   var platformWidth = Ti.App.PLATFORMWIDTH;
@@ -11,17 +12,13 @@
   var styles = win.HT.View.properties;
   var accountsData = Ti.App.USER.accounts;
   
-  /**
-  Model Methods   
-  =============
-  */
- function loadAccounts() {
+  function loadAccounts() {
     var results = [];
     var db = Ti.Database.install(Ti.Filesystem.getResourcesDirectory() + '/hivetrader.sqlite','accounts');
-    var rows = db.execute('SELECT DISTINCT name FROM accounts');
+    var rows = db.execute('SELECT DISTINCT nick FROM accounts');
     
     while (rows.isValidRow()) {
-      results.push({name: '' + rows.fieldByName('name') + ''});
+      results.push({name: '' + rows.fieldByName('nick') + ''});
       rows.next();
     }
     db.close();
@@ -29,6 +26,8 @@
   };
   
   var _data = loadAccounts();
+  
+  Ti.API.debug("the accounts: "+ JSON.stringify(_data));
  
   /**
   Global Views
@@ -137,6 +136,13 @@
     color: "white"
   });
   
+  // Hook up the click event to open a Search window
+  LargeAddAccountButton.addEventListener("click", function() {
+    var SearchAccountsWindow = require('/ht/views/AccountsSearch');
+    var SearchAccountsWindow = new SearchAccountsWindow({HT:win.HT});
+    Ti.UI.currentTab.open(SearchAccountsWindow);
+  });
+  
   var SecureMessage = win.HT.View.createMessageView({
     text: "Visit Hivetrader.com for more info. on security."
   });
@@ -203,7 +209,8 @@
   
   // Loop through the accounts data
   for (var i = 0, len = _data.length; i < len; i++) {
-    var title = _data.name;
+    var title = _data[i].name;
+    Ti.API.debug(JSON.stringify(_data));
     // var total = _data.value;
     // var percentage = _data.percentage;
     // var accountValue = _data.value;
@@ -361,7 +368,9 @@
     
   // If the user is signed in or has accounts, we'll show the accounts window,
   // otherwise we'll load the new accounts window, and prompt them to add some.
-  if (Ti.App.USER.isSignedIn) {
+  if(_data.length < 1 ){
+  	win.add(NoAccountsAddedView);
+  }else if (Ti.App.USER.isSignedIn) {
     win.add(AccountsView);
   } else {
     win.add(NoAccountsAddedView);

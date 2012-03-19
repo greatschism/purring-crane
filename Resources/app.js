@@ -8,7 +8,7 @@ Bootstrap
 */
 
 // Set up the globals
-Titanium.UI.setBackgroundColor('#ded9d0');
+Ti.UI.setBackgroundColor('#ded9d0');
 
 // Namespace
 var HT = {};
@@ -239,7 +239,7 @@ Ti.App._popularServices = [
 
 // Global parameters we'll need in all the views
 Ti.App.PLATFORMWIDTH = Ti.Platform.displayCaps.platformWidth;
-Ti.App.ABS_PATH = Titanium.Filesystem.resourcesDirectory + Titanium.Filesystem.separator;
+Ti.App.ABS_PATH = Ti.Filesystem.resourcesDirectory + Ti.Filesystem.separator;
 
 // Include our main file.
 Ti.include(
