@@ -74,6 +74,12 @@
       backgroundImage: Ti.App.ABS_PATH + "images/back_button.png",
       backgroundLeftCap: 13
     });
+    
+    if(_args.win){
+    	backButton.addEventListener('click', function(){
+    		_args.win.close(0)
+    	});
+    }
 
     return backButton;
   };

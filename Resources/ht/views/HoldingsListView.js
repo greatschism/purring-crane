@@ -184,11 +184,11 @@ function HoldingsWindow(args) {
 	view.add(ServicesScrollView);
 	view.add(SearchView);
 	view.add(message);
-	win.add(BackButton);
+	//win.add(BackButton);
 
 	win.add(view);
 	
-	//win.setTitleControl(secureTitleView);
+	win.setTitleControl(secureTitleView);
 	
 	return win;
 }

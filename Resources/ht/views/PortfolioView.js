@@ -6,7 +6,7 @@
 (function() {
   // Local variables.
   var platformWidth = Ti.App.PLATFORMWIDTH;
-  var win = Titanium.UI.currentWindow;
+  var win = Ti.UI.currentWindow;
   var path = Ti.App.ABS_PATH;
   var styles = win.HT.View.properties;
   var accountsData = Ti.App.USER.accounts;
@@ -17,7 +17,7 @@
   */
  function loadAccounts() {
     var results = [];
-    var db = Titanium.Database.install(Titanium.Filesystem.getResourcesDirectory() + '/hivetrader.sqlite','accounts');
+    var db = Ti.Database.install(Ti.Filesystem.getResourcesDirectory() + '/hivetrader.sqlite','accounts');
     var rows = db.execute('SELECT DISTINCT name FROM accounts');
     
     while (rows.isValidRow()) {
@@ -41,24 +41,9 @@
   
   // Hook up the click event to open a Search window
   AddAccountButton.addEventListener("click", function() {
-    var backButton = win.HT.View.customBackButton({title: "Cancel"});
-    
-    var secureTitleView = win.HT.View.secureTitle({title: "Add Account"});
-    
-    var SearchAccountsWindow = Titanium.UI.createWindow(
-      win.HT.combine(styles.BaseWindow, styles.YellowGradientWindow, {
-        title: "Add Account",
-        url: "/ht/views/AccountsSearch.js",
-        className: "base-window",
-  			HT: win.HT,
-  			titleControl: secureTitleView,
-        leftNavButton: backButton
-      })
-    );
-    Titanium.UI.currentTab.open(SearchAccountsWindow);
-    backButton.addEventListener('click', function() {
-      SearchAccountsWindow.close();
-    });
+    var SearchAccountsWindow = require('/ht/views/AccountsSearch');
+    var SearchAccountsWindow = new SearchAccountsWindow({HT:win.HT});
+    Ti.UI.currentTab.open(SearchAccountsWindow);
   });
   
   /**
@@ -68,7 +53,7 @@
   */
   
   // The Portfolio cards view
-  var AccountCardsWindow = Titanium.UI.createWindow(
+  var AccountCardsWindow = Ti.UI.createWindow(
     win.HT.combine(styles.BaseWindow, styles.CardsWindow, {
       title: "Accounts",
       HT: win.HT,
@@ -76,7 +61,7 @@
     })
   );
   
-  var EditHoldingsWindow = Titanium.UI.createWindow(
+  var EditHoldingsWindow = Ti.UI.createWindow(
     win.HT.combine(styles.YellowGradientWindow, {
       title: "Edit Holdings",
       HT: win.HT
@@ -91,7 +76,7 @@
  =================
  
  */
-  var NoAccountsAddedView = Titanium.UI.createView(
+  var NoAccountsAddedView = Ti.UI.createView(
     win.HT.combine(styles.YellowGradientWindow, {
       width: platformWidth,
       height: 375,
@@ -101,7 +86,7 @@
     })
   );
   
-  var NoAccountsHeaderLabel = Titanium.UI.createLabel({
+  var NoAccountsHeaderLabel = Ti.UI.createLabel({
     width: "auto",
     height: 24,
     top: 33,
@@ -116,7 +101,7 @@
     shadowOffset: {x: 0, y: 1}
   });
   
-  var NoAccountsLeadInLabel = Titanium.UI.createLabel({
+  var NoAccountsLeadInLabel = Ti.UI.createLabel({
     width: 215,
     height: "auto",
     top: 66,
@@ -130,14 +115,14 @@
     shadowOffset: {x: 0, y: 0.5}
   });
   
-  var BeeSafeGraphic = Titanium.UI.createImageView({
+  var BeeSafeGraphic = Ti.UI.createImageView({
     width: 155,
     height: 94,
     top: 140,
     image: path + "images/secure_bee_safe.png"
   });
   
-  var LargeAddAccountButton = Titanium.UI.createButton({
+  var LargeAddAccountButton = Ti.UI.createButton({
     width: 240,
     height: 51,
     top: 255,
@@ -169,7 +154,7 @@
   Portfolio Accounts List
   =======================
   */
-  var AccountsView = Titanium.UI.createView({
+  var AccountsView = Ti.UI.createView({
     width: platformWidth,
     height: 375,
     top: 0,
@@ -177,7 +162,7 @@
     right: 0
   });
   
-  var HomeRibbons = Titanium.UI.createView({
+  var HomeRibbons = Ti.UI.createView({
     width: platformWidth,
     height: 160,
     top: 0,
@@ -202,7 +187,7 @@
   HomeRibbons.add(AccountsPane);
   HomeRibbons.add(TotalValuePane);
   
-  var tableScrollView = Titanium.UI.createScrollView({
+  var tableScrollView = Ti.UI.createScrollView({
     width: platformWidth,
     height: 281,
     top: 52,
@@ -213,7 +198,7 @@
   });
   
   // Build out the table
-  var AccountsTable = Titanium.UI.createTableView(styles.TableView);
+  var AccountsTable = Ti.UI.createTableView(styles.TableView);
   var accountsTableArray = []; // Stores the table row objects.
   
   // Loop through the accounts data
@@ -224,9 +209,9 @@
     // var accountValue = _data.value;
     // var numberOfHoldings = _data.positions.length;
     
-    var row = Titanium.UI.createTableViewRow(styles.TableViewRow);
+    var row = Ti.UI.createTableViewRow(styles.TableViewRow);
     
-    var AccountLabel = Titanium.UI.createLabel({
+    var AccountLabel = Ti.UI.createLabel({
       width: 126,
       height: 15,
       top: 15,
@@ -242,7 +227,7 @@
       shadowOffset: {x: 0, y: 0.5}
     });
     
-    var NumberOfHoldingsLabel = Titanium.UI.createLabel({
+    var NumberOfHoldingsLabel = Ti.UI.createLabel({
       width: 235,
       height: 15,
       bottom: 10,
@@ -257,7 +242,7 @@
       shadowOffset: {x: 0, y: 0.5}
     });
     
-    var AccountPercentageLabel = Titanium.UI.createLabel({
+    var AccountPercentageLabel = Ti.UI.createLabel({
       width: 63,
       height: 19,
       left: 125,
@@ -270,7 +255,7 @@
       color: "#777165"
     });
     
-    var AccountWorthLabel = Titanium.UI.createLabel({
+    var AccountWorthLabel = Ti.UI.createLabel({
       width: 126,
       height: 19,
       right: 34,
@@ -283,7 +268,7 @@
       color: "#777165"
     });
     
-    var ArrowImage = Titanium.UI.createImageView({
+    var ArrowImage = Ti.UI.createImageView({
       width: 6,
       height: 9,
       anchorPoint: {y: 0.5},
@@ -291,7 +276,7 @@
       image: path + "images/tablerow_arrow.png"
     });
     
-    var _border = Titanium.UI.createView({
+    var _border = Ti.UI.createView({
       width: platformWidth,
       height: 1,
       backgroundColor: "#c0baae",
@@ -339,7 +324,7 @@
   
   AccountCardsWindow.addEventListener("edit", function(e) {
     var secureTitleView = win.HT.View.secureTitle({title: "Add Account"});
-    var EditHoldingsWindow = Titanium.UI.createWindow(
+    var EditHoldingsWindow = Ti.UI.createWindow(
       win.HT.combine(styles.BaseWindow, styles.YellowGradientWindow, {
         title: "Edit Holding",
         titleControl: secureTitleView,
@@ -348,7 +333,7 @@
       })
     );
     
-    Titanium.UI.currentTab.open(EditHoldingsWindow);
+    Ti.UI.currentTab.open(EditHoldingsWindow);
   });
   
   // Bind the table rows to open the corresponding data
@@ -358,7 +343,7 @@
     AccountCardsWindow.leftNavButton = backButton;
     cards.scrollToView(idx);
     
-    Titanium.UI.currentTab.open(AccountCardsWindow);
+    Ti.UI.currentTab.open(AccountCardsWindow);
     
     backButton.addEventListener("click", function(e) {
       AccountCardsWindow.close();

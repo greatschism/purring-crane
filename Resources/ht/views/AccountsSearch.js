@@ -3,11 +3,18 @@
 // Copyright: ©2011 Hivetrader
 // ==========================================================================
 
-(function() {
+function AccountsSearch(args) {
 	var platformWidth = Ti.App.PLATFORMWIDTH;
-	var win = Titanium.UI.currentWindow;
+	var styles = args.HT.View.properties;
 	var path = Ti.App.ABS_PATH;
-	var styles = win.HT.View.properties;
+	var win = Ti.UI.createWindow(args.HT.combine(styles.BaseWindow, styles.YellowGradientWindow, {
+		title : "Add Positions",
+		HT : args.HT
+	}));
+	
+	var backButton = win.HT.View.customBackButton({'win': win});
+	win.leftNavButton = backButton;
+
 	var searchRows = [];
 
 	/**
@@ -22,7 +29,7 @@
 	 ============
 	 Any reusable view objects will be stored here.
 	 */
-	var view = Titanium.UI.createView({
+	var view = Ti.UI.createView({
 		width : platformWidth,
 		height : 375,
 		top : 0,
@@ -31,7 +38,7 @@
 	});
 
 	// If there's no holdings, add this view
-	var HoldingsListView = Titanium.UI.createView({
+	var HoldingsListView = Ti.UI.createView({
 		width : platformWidth,
 		height : 375,
 		top : 0,
@@ -44,7 +51,7 @@
 	 ======
 	 The search field:
 	 */
-	var SearchView = Titanium.UI.createSearchBar(win.HT.combine(styles.SearchBar, {
+	var SearchView = Ti.UI.createSearchBar(win.HT.combine(styles.SearchBar, {
 		hintText : "Enter trading account name",
 		top : 0
 	}));
@@ -60,11 +67,11 @@
 	}
 
 	// The search results scrollview, hidden on to begin with
-	var SearchTableScrollView = Titanium.UI.createScrollView(win.HT.combine(styles.SearchResultsScrollView, {
+	var SearchTableScrollView = Ti.UI.createScrollView(win.HT.combine(styles.SearchResultsScrollView, {
 		visible : false
 	}));
 
-	var SearchTable = Titanium.UI.createTableView({
+	var SearchTable = Ti.UI.createTableView({
 		data : searchRows,
 		anchor : {
 			x : 0,
@@ -75,39 +82,22 @@
 		backgroundColor : "#f4ebbd"
 	});
 
-	
 	SearchTable.addEventListener("click", function(e) {
 		var idx = e.index;
 		var row = e.row.rowData;
 		var rowData = e.rowData;
 		var _title = rowData.title;
-		var secureTitleView = win.HT.View.secureTitle({
-			title : "Add Account"
-		});
-		//var backButton = win.HT.View.customBackButton({});
-		var AccountCredsWindow = Titanium.UI.createWindow(win.HT.combine(styles.BaseWindow, styles.YellowGradientWindow, {
-			title : "Add Account",
-			url : "/ht/views/AccountsCredentials.js",
-			HT : win.HT,
-			_accountName : _title,
-			titleControl : secureTitleView
-		}));
-
-		Ti.API.debug('rowData: ' + JSON.stringify(rowData));
 		
-		Titanium.UI.currentTab.open(AccountCredsWindow);
-
-		// backButton.addEventListener('click', function() {
-			// AccountCredsWindow.close();
-		// });
+		var AccountCredsWindow = require('/ht/views/AccountsCredentials');
+		var AccountCredsWindow = new AccountCredsWindow({HT:win.HT, accountName:_title,});
+		Ti.UI.currentTab.open(AccountCredsWindow);
+ 
 	});
-
-
 	
-	var ServicesScrollView = Titanium.UI.createScrollView(styles.SearchResultsScrollView);
+	var ServicesScrollView = Ti.UI.createScrollView(styles.SearchResultsScrollView);
 
 	// Or choose a popular trading service:
-	ServicesScrollView.add(Titanium.UI.createLabel({
+	ServicesScrollView.add(Ti.UI.createLabel({
 		text : "Or choose a popular trading service:",
 		width : platformWidth - 20,
 		height : 12,
@@ -124,7 +114,7 @@
 		}
 	}));
 
-	var buttonsView = Titanium.UI.createView({
+	var buttonsView = Ti.UI.createView({
 		width : platformWidth,
 		height : "auto",
 		top : 42,
@@ -133,7 +123,7 @@
 
 	for(var i = 0, len = _popularServicesList.length; i < len; i++) {
 		var _accountName = _popularServicesList[i];
-		var popularServiceButton = Titanium.UI.createButton({
+		var popularServiceButton = Ti.UI.createButton({
 			title : _accountName,
 			width : 290,
 			height : 35,
@@ -155,24 +145,10 @@
 
 		popularServiceButton.addEventListener('click', function(e) {
 			var _title = e.source.title;
-			var secureTitleView = win.HT.View.secureTitle({
-				title : "Add Account"
-			});
-			var backButton = win.HT.View.customBackButton({});
-			var AccountCredsWindow = Titanium.UI.createWindow(win.HT.combine(styles.BaseWindow, styles.YellowGradientWindow, {
-				title : "Add Account",
-				url : "/ht/views/AccountsCredentials.js",
-				HT : win.HT,
-				_accountName : _title,
-				titleControl : secureTitleView,
-				leftNavButton : backButton
-			}));
-
-			Titanium.UI.currentTab.open(AccountCredsWindow);
-
-			backButton.addEventListener('click', function() {
-				AccountCredsWindow.close();
-			});
+			
+			var AccountCredsWindow = require('/ht/views/AccountsCredentials');
+			var AccountCredsWindow = new AccountCredsWindow({HT:win.HT, accountName:_title,});
+			Ti.UI.currentTab.open(AccountCredsWindow);
 		});
 
 		buttonsView.add(popularServiceButton);
@@ -189,11 +165,11 @@
 	});
 
 	SearchView.addEventListener('change', function(e) {
-		Titanium.API.debug('search bar: ' + e.value);
+		Ti.API.debug('search bar: ' + e.value);
 
 		if(e.value.length > 1) {
 
-			var xhrSymbolSearch = Titanium.Network.createHTTPClient();
+			var xhrSymbolSearch = Ti.Network.createHTTPClient();
 			xhrSymbolSearch.onload = function() {
 				var matches = JSON.parse(this.responseText);
 				Ti.API.debug(matches);
@@ -201,8 +177,8 @@
 
 				for(var x in matches.results) {
 					fetchedData.push({
-						title: matches.results[x].name,
-						inst: matches.results[x]
+						title : matches.results[x].name,
+						inst : matches.results[x]
 					});
 				}
 
@@ -237,4 +213,8 @@
 	view.add(message);
 
 	win.add(view);
-})();
+
+	return win;
+}
+
+module.exports = AccountsSearch;
