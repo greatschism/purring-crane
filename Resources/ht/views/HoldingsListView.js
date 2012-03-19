@@ -7,21 +7,15 @@ function HoldingsWindow(args) {
 	// Local variables.
 	var platformWidth = Ti.App.PLATFORMWIDTH;
 	var styles = args.HT.View.properties;
-	var secureTitleView = args.HT.View.secureTitle({title: "Add Account"});
+	var path = Ti.App.ABS_PATH;
 	var win = Ti.UI.createWindow(args.HT.combine(styles.BaseWindow, styles.YellowGradientWindow, {
 		title : "Add Holdings",
 		HT : args.HT
 	}));
 	
-	var BackButton = win.HT.View.customBackButton({title: "Back"});
-	
-	BackButton.addEventListener("click", function(e) {
-      win.close();
-    });
-    
-    //win.add(BackButton);
+	var backButton = win.HT.View.customBackButton({'win': win});
+	win.leftNavButton = backButton;
 
-	var path = Ti.App.ABS_PATH;
 	var holdingInstructionsText = "You have no holdings added yet. Use the above search field to find your first holding.";
 
 	/**
@@ -184,11 +178,7 @@ function HoldingsWindow(args) {
 	view.add(ServicesScrollView);
 	view.add(SearchView);
 	view.add(message);
-	//win.add(BackButton);
-
 	win.add(view);
-	
-	win.setTitleControl(secureTitleView);
 	
 	return win;
 }

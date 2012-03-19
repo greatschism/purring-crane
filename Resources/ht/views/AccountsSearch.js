@@ -8,7 +8,7 @@ function AccountsSearch(args) {
 	var styles = args.HT.View.properties;
 	var path = Ti.App.ABS_PATH;
 	var win = Ti.UI.createWindow(args.HT.combine(styles.BaseWindow, styles.YellowGradientWindow, {
-		title : "Add Positions",
+		title : "Add Account",
 		HT : args.HT
 	}));
 	

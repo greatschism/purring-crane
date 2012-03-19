@@ -8,9 +8,12 @@ function AccountsCredentials(args) {
 	var styles = args.HT.View.properties;
 	var path = Ti.App.ABS_PATH;
 	var win = Ti.UI.createWindow(args.HT.combine(styles.BaseWindow, styles.YellowGradientWindow, {
-		title : "Add Position",
+		title : "Account Nickname",
 		HT : args.HT
 	}));
+	
+	var backButton = win.HT.View.customBackButton({'win': win});
+	win.leftNavButton = backButton;
 
 	var _accountName = args.accountName || "";
 
