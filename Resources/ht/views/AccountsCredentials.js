@@ -133,6 +133,7 @@ function AccountsCredentials(args) {
 		if(nickname === "") {
 			alert("Please choose a nickname.");
 		} else {
+			Ti.App.Properties.setString('newPosANick', nickname);
 			Ti.UI.currentTab.open(AddEditHoldingsWindow, {
 				animated : true
 			});

@@ -12,8 +12,10 @@ function HoldingsWindow(args) {
 		title : "Add Holdings",
 		HT : args.HT
 	}));
-	
-	var backButton = win.HT.View.customBackButton({'win': win});
+
+	var backButton = win.HT.View.customBackButton({
+		'win' : win
+	});
 	win.leftNavButton = backButton;
 
 	var holdingInstructionsText = "You have no holdings added yet. Use the above search field to find your first holding.";
@@ -42,21 +44,6 @@ function HoldingsWindow(args) {
 	});
 
 	// If there are holdings, populate this view.
-
-	/**
-	 Windows
-	 =======
-	 Any windows go here
-	 */
-	var secureTitleView = win.HT.View.secureTitle({
-		title : "Add Account"
-	});
-	var EditHoldingsWindow = Ti.UI.createWindow(win.HT.combine(styles.BaseWindow, styles.YellowGradientWindow, {
-		title : "Edit Holding",
-		titleControl : secureTitleView,
-		url : "/ht/views/HoldingsEditView.js",
-		HT : win.HT
-	}));
 
 	/**
 	 Search
@@ -118,12 +105,15 @@ function HoldingsWindow(args) {
 				var fetchedData = [];
 
 				for(var i = 0, len = matches.results.length; i < len; i++) {
-					var _accountName = matches.results[i].name;
-					var _fullName = matches.results[i].full;
-					if(_fullName.length > 25)
-						var _fullName = _fullName.substring(0, 25) + '...';
+					var _name = matches.results[i].name;
+					var _full = matches.results[i].full;
+					var _details = matches.results[i];
+					if(_full.length > 25)
+						var _full = _full.substring(0, 25) + '...';
 					var HoldingsButton = Ti.UI.createButton({
-						title : _accountName + ' - ' + _fullName,
+						title : _name + ' - ' + _full,
+						symbol : _name,
+						details : _details,
 						width : 290,
 						height : 35,
 						top : 45 * i,
@@ -145,7 +135,14 @@ function HoldingsWindow(args) {
 					HoldingsButton.addEventListener('click', function(e) {
 						Ti.API.debug('clicked the button: ' + e);
 						var holdingName = e.source.title;
-						EditHoldingsWindow._holdingName = holdingName;
+						Ti.App.Properties.setString('newPosSymbol', e.source.symbol);
+						Ti.App.Properties.setString('newPosSymbolDetails', JSON.stringify(e.source.details));
+
+						var EditHoldingsWindow = require('/ht/views/HoldingsEditView');
+						var EditHoldingsWindow = new EditHoldingsWindow({
+							HT : win.HT,
+							_holdingName : holdingName,
+						});
 						Ti.UI.currentTab.open(EditHoldingsWindow);
 
 						backButton.addEventListener('click', function() {
@@ -179,7 +176,7 @@ function HoldingsWindow(args) {
 	view.add(SearchView);
 	view.add(message);
 	win.add(view);
-	
+
 	return win;
 }
 

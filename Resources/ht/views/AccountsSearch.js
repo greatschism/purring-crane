@@ -88,6 +88,8 @@ function AccountsSearch(args) {
 		var rowData = e.rowData;
 		var _title = rowData.title;
 		
+		Ti.App.Properties.setString('newPosAName', _title);
+		
 		var AccountCredsWindow = require('/ht/views/AccountsCredentials');
 		var AccountCredsWindow = new AccountCredsWindow({HT:win.HT, accountName:_title,});
 		Ti.UI.currentTab.open(AccountCredsWindow);
@@ -145,6 +147,8 @@ function AccountsSearch(args) {
 
 		popularServiceButton.addEventListener('click', function(e) {
 			var _title = e.source.title;
+			
+			Ti.App.Properties.setString('newPosAName', _title);
 			
 			var AccountCredsWindow = require('/ht/views/AccountsCredentials');
 			var AccountCredsWindow = new AccountCredsWindow({HT:win.HT, accountName:_title,});
