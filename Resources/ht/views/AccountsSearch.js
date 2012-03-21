@@ -11,29 +11,16 @@ function AccountsSearch(args) {
 		title : "Add Account",
 		HT : args.HT
 	}));
-	
-	var backButton = win.HT.View.customBackButton({'win': win});
+
+	var backButton = win.HT.View.customBackButton({
+		'win' : win
+	});
 	win.leftNavButton = backButton;
 
 	var searchRows = [];
-	
-	
-	function loadAccounts() {
-		var results = [];
-		var db = Ti.Database.install(Ti.Filesystem.getResourcesDirectory() + '/hivetrader.sqlite', 'accounts');
-		var rows = db.execute('SELECT DISTINCT nick FROM accounts');
+	var _accounts = win.HT.Model.getAccounts();
 
-		while(rows.isValidRow()) {
-			results.push({
-				name : '' + rows.fieldByName('nick') + ''
-			});
-			rows.next();
-		}
-		db.close();
-		return results;
-	};
-
-
+	Ti.API.debug(JSON.stringify(_accounts));
 	/**
 	 Data Models
 	 ===========
@@ -77,7 +64,8 @@ function AccountsSearch(args) {
 	// Populate the data array first
 	for(var i = 0, len = _popularServicesList.length; i < len; i++) {
 		var row = Ti.UI.createTableViewRow({
-			title : _popularServicesList[i],
+			title : _popularServicesList[i].name,
+			xid : _popularServicesList[i].xid,
 			backgroundColor : "#f4ebbd"
 		});
 		searchRows.push(row);
@@ -104,145 +92,158 @@ function AccountsSearch(args) {
 		var row = e.row.rowData;
 		var rowData = e.rowData;
 		var _title = rowData.title;
-		
+		var _xid = rowData.xid;
+
 		Ti.App.Properties.setString('newPosAName', _title);
-		
+		Ti.App.Properties.setString('newPosAXid', _xid);
+
 		var AccountCredsWindow = require('/ht/views/AccountsCredentials');
-		var AccountCredsWindow = new AccountCredsWindow({HT:win.HT, accountName:_title,});
+		var AccountCredsWindow = new AccountCredsWindow({
+			HT : win.HT,
+			accountName : _title,
+		});
 		Ti.UI.currentTab.open(AccountCredsWindow);
- 
+
 	});
-	
 	/*
 	 * The Popular Services View
 	 */
-	
-	var ServicesScrollView = Ti.UI.createScrollView(styles.SearchResultsScrollView);
+	if(_accounts.length > 0) {
+		var ServicesScrollView = Ti.UI.createScrollView(styles.SearchResultsScrollView);
 
-	// Or choose a popular trading service:
-	ServicesScrollView.add(Ti.UI.createLabel({
-		text : "Or choose a popular trading service:",
-		width : platformWidth - 20,
-		height : 12,
-		left : 15,
-		top : 18,
-		color : "#998654",
-		font : {
-			fontSize : 12
-		},
-		shadowColor : "white",
-		shadowOffset : {
-			x : 0,
-			y : 0.5
-		}
-	}));
-
-	var buttonsView = Ti.UI.createView({
-		width : platformWidth,
-		height : "auto",
-		top : 42,
-		left : 0
-	});
-
-	for(var i = 0, len = _popularServicesList.length; i < len; i++) {
-		var _accountName = _popularServicesList[i];
-		var popularServiceButton = Ti.UI.createButton({
-			title : _accountName,
-			width : 290,
-			height : 35,
-			top : 45 * i,
+		// Or choose and existing trading account
+		ServicesScrollView.add(Ti.UI.createLabel({
+			text : "Or choose an existing Trading Account:",
+			width : platformWidth - 20,
+			height : 12,
 			left : 15,
-			color : "#0c0905",
+			top : 18,
+			color : "#998654",
 			font : {
-				fontSize : 12,
-				fontWeight : "bold"
+				fontSize : 12
 			},
-			textAlign : "left",
 			shadowColor : "white",
 			shadowOffset : {
 				x : 0,
-				y : 1
-			},
-			backgroundImage : path + "images/btn_popular_service.png"
+				y : 0.5
+			}
+		}));
+
+		var buttonsView = Ti.UI.createView({
+			width : platformWidth,
+			height : "auto",
+			top : 42,
+			left : 0
 		});
 
-		popularServiceButton.addEventListener('click', function(e) {
-			var _title = e.source.title;
-			
-			Ti.App.Properties.setString('newPosAName', _title);
-			
-			var AccountCredsWindow = require('/ht/views/AccountsCredentials');
-			var AccountCredsWindow = new AccountCredsWindow({HT:win.HT, accountName:_title,});
-			Ti.UI.currentTab.open(AccountCredsWindow);
-		});
+		for(var i = 0, len = _accounts.length; i < len; i++) {
+			var _accountName = _accounts[i].nick;
+			var popularServiceButton = Ti.UI.createButton({
+				title : _accountName,
+				id : _accounts[i].id,
+				width : 290,
+				height : 35,
+				top : 45 * i,
+				left : 15,
+				color : "#0c0905",
+				font : {
+					fontSize : 12,
+					fontWeight : "bold"
+				},
+				textAlign : "left",
+				shadowColor : "white",
+				shadowOffset : {
+					x : 0,
+					y : 1
+				},
+				backgroundImage : path + "images/btn_popular_service.png"
+			});
 
-		buttonsView.add(popularServiceButton);
-	}
-	
-	/*
-	 * The Popular Services View
-	 */
-	
-	var ServicesScrollView = Ti.UI.createScrollView(styles.SearchResultsScrollView);
+			popularServiceButton.addEventListener('click', function(e) {
+				var _title = e.source.title;
+				var _id = e.source.id;
 
-	// Or choose a popular trading service:
-	ServicesScrollView.add(Ti.UI.createLabel({
-		text : "Or choose a popular trading service:",
-		width : platformWidth - 20,
-		height : 12,
-		left : 15,
-		top : 18,
-		color : "#998654",
-		font : {
-			fontSize : 12
-		},
-		shadowColor : "white",
-		shadowOffset : {
-			x : 0,
-			y : 0.5
+				Ti.App.Properties.setString('newPosANick', _title);
+				Ti.App.Properties.setString('newPosAId', _id);
+
+				var AccountCredsWindow = require('/ht/views/HoldingsListView');
+				var AccountCredsWindow = new AccountCredsWindow({
+					HT : win.HT
+				});
+				Ti.UI.currentTab.open(AccountCredsWindow);
+			});
+
+			buttonsView.add(popularServiceButton);
 		}
-	}));
+	} else {
+		var ServicesScrollView = Ti.UI.createScrollView(styles.SearchResultsScrollView);
 
-	var buttonsView = Ti.UI.createView({
-		width : platformWidth,
-		height : "auto",
-		top : 42,
-		left : 0
-	});
-
-	for(var i = 0, len = _popularServicesList.length; i < len; i++) {
-		var _accountName = _popularServicesList[i];
-		var popularServiceButton = Ti.UI.createButton({
-			title : _accountName,
-			width : 290,
-			height : 35,
-			top : 45 * i,
+		// Or choose a popular trading service:
+		ServicesScrollView.add(Ti.UI.createLabel({
+			text : "Or choose a popular trading service:",
+			width : platformWidth - 20,
+			height : 12,
 			left : 15,
-			color : "#0c0905",
+			top : 18,
+			color : "#998654",
 			font : {
-				fontSize : 12,
-				fontWeight : "bold"
+				fontSize : 12
 			},
-			textAlign : "left",
 			shadowColor : "white",
 			shadowOffset : {
 				x : 0,
-				y : 1
-			},
-			backgroundImage : path + "images/btn_popular_service.png"
+				y : 0.5
+			}
+		}));
+
+		var buttonsView = Ti.UI.createView({
+			width : platformWidth,
+			height : "auto",
+			top : 42,
+			left : 0
 		});
 
-		popularServiceButton.addEventListener('click', function(e) {
-			var _title = e.source.title;
-			
-			Ti.App.Properties.setString('newPosAName', _title);
-			
-			var AccountCredsWindow = require('/ht/views/AccountsCredentials');
-			var AccountCredsWindow = new AccountCredsWindow({HT:win.HT, accountName:_title,});
-			Ti.UI.currentTab.open(AccountCredsWindow);
-		});
+		for(var i = 0, len = _popularServicesList.length; i < len; i++) {
+			var _accountName = _popularServicesList[i].name;
+			var popularServiceButton = Ti.UI.createButton({
+				title : _accountName,
+				xid : _popularServicesList[i].xid,
+				width : 290,
+				height : 35,
+				top : 45 * i,
+				left : 15,
+				color : "#0c0905",
+				font : {
+					fontSize : 12,
+					fontWeight : "bold"
+				},
+				textAlign : "left",
+				shadowColor : "white",
+				shadowOffset : {
+					x : 0,
+					y : 1
+				},
+				backgroundImage : path + "images/btn_popular_service.png"
+			});
 
-		buttonsView.add(popularServiceButton);
+			popularServiceButton.addEventListener('click', function(e) {
+				var _title = e.source.title;
+				var _xid = e.source.xid;
+
+				Ti.App.Properties.setString('newPosAName', _title);
+				Ti.App.Properties.setString('newPosAXid', _xid);
+
+				var AccountCredsWindow = require('/ht/views/AccountsCredentials');
+				var AccountCredsWindow = new AccountCredsWindow({
+					HT : win.HT,
+					accountName : _title,
+				});
+				Ti.UI.currentTab.open(AccountCredsWindow);
+			});
+
+			buttonsView.add(popularServiceButton);
+		}
+
 	}
 
 	SearchView.addEventListener("focus", function(e) {
@@ -269,7 +270,7 @@ function AccountsSearch(args) {
 				for(var x in matches.results) {
 					fetchedData.push({
 						title : matches.results[x].name,
-						inst : matches.results[x]
+						xid : matches.results[x].id
 					});
 				}
 

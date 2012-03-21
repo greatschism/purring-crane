@@ -216,26 +216,49 @@ Ti.App.USER = {
   ]
 };
 
-Ti.App._popularServices = [
-  "BlackRock",
-  "Charles Schwab",
-  "Citibank",
-  "Edward Jones",
-  "E*Trade",
-  "Fidelity Investments",
-  "Forex Capital Markets FXCM",
-  "Merrill Lynch",
-  "Putnam Investments",
-  "Scottrade",
-  "TD Ameritrade",
-  "thinkorswim",
-  "TradeKing",
-  "TradeMonster",
-  "TradeStation",
-  "Vanguard",
-  "Wells Fargo",
-  "Zecco"
-];
+Ti.App._popularServices = [{
+    name: "Charles Schwab",
+    xid: 524
+}, {
+    name: "E*Trade",
+    xid: 846
+}, {
+    name: "Fidelity",
+    xid: 970
+}, {
+    name: "Merrill Edge",
+    xid: 1764
+}, {
+    name: "Morgan Stanley Smith Barney",
+    xid: 1874
+}, {
+    name: "Muriel Siebert",
+    xid: 1887
+}, {
+    name: "Scottrade",
+    xid: 2427
+}, {
+    name: "Sharebuilder (ING)",
+    xid: 1412
+}, {
+    name: "TD Ameritrade",
+    xid: 2675
+}, {
+    name: "Thinkorswim",
+    xid: 2754
+}, {
+    name: "TradeKing",
+    xid: 2786
+}, {
+    name: "TradeMONSTER",
+    xid: 2787
+}, {
+    name: "Vanguard",
+    xid: 2978
+}, {
+    name: "Zecco",
+    xid: 3148
+}];
 
 // Global parameters we'll need in all the views
 Ti.App.PLATFORMWIDTH = Ti.Platform.displayCaps.platformWidth;
