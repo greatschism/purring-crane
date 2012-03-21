@@ -77,7 +77,7 @@ function HoldingsEditView(args) {
 	var AccountNameLabel = Titanium.UI.createLabel({
 		width : 260,
 		height : "auto",
-		text : "Vanguard Short-Term Investment-Grade Inv (MUTF)",
+		text : Ti.App.Properties.getString('newPosANick', 'Pudding'),
 		top : 48,
 		left : 15,
 		font : {
@@ -120,17 +120,20 @@ function HoldingsEditView(args) {
 			type : "options",
 			options : ["Buy", "Sell Short", "Sell to Close", "Buy to Close"]
 		}, {
-			label : "# of Shares",
-			hint : ""
+			label : "Shares",
+			hint : "# of Shares",
+			keyboardType : Titanium.UI.KEYBOARD_NUMBER_PAD
 		}, {
 			label : "Price",
-			hint : "Per Share"
+			hint : "Per Share",
+			keyboardType : Titanium.UI.KEYBOARD_DECIMAL_PAD
 		}, {
 			label : "Commission",
-			hint : "$ Value"
+			hint : "$ Value",
+			keyboardType : Titanium.UI.KEYBOARD_DECIMAL_PAD
 		}, {
 			label : "Date",
-			hint : "",
+			hint : "Date Order Placed",
 			type : "date_field"
 		}]
 	});
@@ -154,6 +157,22 @@ function HoldingsEditView(args) {
 	});
 
 	ConnectToHTButton.addEventListener("click", function() {
+		for(i in HoldingsFormView.children) {
+			for(x in HoldingsFormView.children[i].children) {
+				if(HoldingsFormView.children[i].children[x].hintText == "Account type") {
+					Ti.App.Properties.setString('newPosType', HoldingsFormView.children[i].children[x].value);
+				} else if(HoldingsFormView.children[i].children[x].hintText == "# of Shares") {
+					Ti.App.Properties.setString('newPosShares', HoldingsFormView.children[i].children[x].value);
+				} else if(HoldingsFormView.children[i].children[x].hintText == "Per Share") {
+					Ti.App.Properties.setString('newPosPrice', HoldingsFormView.children[i].children[x].value);
+				} else if(HoldingsFormView.children[i].children[x].hintText == "$ Value") {
+					Ti.App.Properties.setString('newPosCommission', HoldingsFormView.children[i].children[x].value);
+				} else if(HoldingsFormView.children[i].children[x].hintText == "Date Order Placed") {
+					Ti.App.Properties.setString('newPosDate', HoldingsFormView.children[i].children[x].value);
+				}
+			}
+		}
+
 		var CloseButton = Titanium.UI.createButton(win.HT.combine(styles.BaseButton, {
 			width : 65,
 			title : "Close"
@@ -225,6 +244,7 @@ function HoldingsEditView(args) {
 	view.add(EditHoldingScrollView);
 
 	win.add(view);
+
 	return win;
 }
 
