@@ -16,6 +16,23 @@ function AccountsSearch(args) {
 	win.leftNavButton = backButton;
 
 	var searchRows = [];
+	
+	
+	function loadAccounts() {
+		var results = [];
+		var db = Ti.Database.install(Ti.Filesystem.getResourcesDirectory() + '/hivetrader.sqlite', 'accounts');
+		var rows = db.execute('SELECT DISTINCT nick FROM accounts');
+
+		while(rows.isValidRow()) {
+			results.push({
+				name : '' + rows.fieldByName('nick') + ''
+			});
+			rows.next();
+		}
+		db.close();
+		return results;
+	};
+
 
 	/**
 	 Data Models
@@ -95,6 +112,76 @@ function AccountsSearch(args) {
 		Ti.UI.currentTab.open(AccountCredsWindow);
  
 	});
+	
+	/*
+	 * The Popular Services View
+	 */
+	
+	var ServicesScrollView = Ti.UI.createScrollView(styles.SearchResultsScrollView);
+
+	// Or choose a popular trading service:
+	ServicesScrollView.add(Ti.UI.createLabel({
+		text : "Or choose a popular trading service:",
+		width : platformWidth - 20,
+		height : 12,
+		left : 15,
+		top : 18,
+		color : "#998654",
+		font : {
+			fontSize : 12
+		},
+		shadowColor : "white",
+		shadowOffset : {
+			x : 0,
+			y : 0.5
+		}
+	}));
+
+	var buttonsView = Ti.UI.createView({
+		width : platformWidth,
+		height : "auto",
+		top : 42,
+		left : 0
+	});
+
+	for(var i = 0, len = _popularServicesList.length; i < len; i++) {
+		var _accountName = _popularServicesList[i];
+		var popularServiceButton = Ti.UI.createButton({
+			title : _accountName,
+			width : 290,
+			height : 35,
+			top : 45 * i,
+			left : 15,
+			color : "#0c0905",
+			font : {
+				fontSize : 12,
+				fontWeight : "bold"
+			},
+			textAlign : "left",
+			shadowColor : "white",
+			shadowOffset : {
+				x : 0,
+				y : 1
+			},
+			backgroundImage : path + "images/btn_popular_service.png"
+		});
+
+		popularServiceButton.addEventListener('click', function(e) {
+			var _title = e.source.title;
+			
+			Ti.App.Properties.setString('newPosAName', _title);
+			
+			var AccountCredsWindow = require('/ht/views/AccountsCredentials');
+			var AccountCredsWindow = new AccountCredsWindow({HT:win.HT, accountName:_title,});
+			Ti.UI.currentTab.open(AccountCredsWindow);
+		});
+
+		buttonsView.add(popularServiceButton);
+	}
+	
+	/*
+	 * The Popular Services View
+	 */
 	
 	var ServicesScrollView = Ti.UI.createScrollView(styles.SearchResultsScrollView);
 
